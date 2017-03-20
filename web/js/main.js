@@ -74,8 +74,8 @@ $(document).ready(function() {
     var nbimg = $('form img').length;
 
     for(var i=0; i < nbimg; i++){
-        //$('#suppr').trigger('click');
-        //$('#add_image').trigger('click');
+        $('#suppr').trigger('click');
+        $('#add_image').trigger('click');
     }
 
 });

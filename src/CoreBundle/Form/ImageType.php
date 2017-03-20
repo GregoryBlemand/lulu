@@ -7,7 +7,6 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ImageType extends AbstractType
 {
@@ -19,7 +18,7 @@ class ImageType extends AbstractType
         $builder
             ->add('file', FileType::class, array(
                 'label' => 'Envoyer des images :',
-                'attr'  => array('class' => 'form-control')
+                'attr'  => array('class' => 'form-control', 'multiple' => true)
             ))
             ->add('alt', TextType::class, array(
                 'label' => 'text alternatif :',

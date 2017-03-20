@@ -23,7 +23,8 @@ class GaleryController extends Controller
         ));
     }
 
-    public function addAction(Request $request){
+    public function addAction(Request $request)
+    {
         $galery = new Galerie();
         $form = $this->createForm(GalerieType::class, $galery);
 
@@ -49,7 +50,8 @@ class GaleryController extends Controller
         return $this->render('CoreBundle:Galery:add.html.twig', array('form' => $form->createView()));
     }
 
-    public function editAction($id, Request $request){
+    public function editAction($id, Request $request)
+    {
         $em = $this->getDoctrine()->getManager();
         $galery = $em->getRepository('CoreBundle:Galerie')->find($id);
         $form = $this->createForm(GalerieType::class, $galery);
@@ -82,7 +84,8 @@ class GaleryController extends Controller
         ));
     }
 
-    public function deleteAction($id){
+    public function deleteAction($id)
+    {
         $em = $this->getDoctrine()->getManager();
         $galery = $em->getRepository('CoreBundle:Galerie')->find($id);
 
@@ -90,6 +93,26 @@ class GaleryController extends Controller
         $em->flush();
 
         return $this->redirectToRoute('galery_index');
+    }
+
+    public function deleteImgAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        // On récupère l'image et sa galerie associée
+        $img = $em->getRepository('CoreBundle:Image')->find($id);
+        $galery = $img->getGalerie();
+
+        // On retire l'image de la galerie
+        $galery->removeImage($img);
+
+        // On supprime l'image
+        $em->remove($img);
+
+        // MAJ finale
+        $em->flush();
+
+        return $this->redirectToRoute('edit_galery', array('id' => $galery->getId()));
     }
 }
 

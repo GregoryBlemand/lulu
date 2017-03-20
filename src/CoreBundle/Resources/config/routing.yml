@@ -32,6 +32,12 @@ delete_galery:
     requirements:
         id: \d+
 
+delete_image:
+    path:     /deleteimg/{id}
+    defaults: { _controller: CoreBundle:Galery:deleteImg }
+    requirements:
+        id: \d+
+
 show_page:
     path:    /{slug}
     defaults:
