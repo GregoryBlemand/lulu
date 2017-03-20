@@ -1,0 +1,144 @@
+/****************************************************************************\
+                               Regles generales
+\****************************************************************************/
+
+*{ box-sizing:border-box }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: "Century Gothic";
+}
+
+.container {
+  position: relative;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+/****************************************************************************\
+                               Header + navigation
+\****************************************************************************/
+header{
+  margin-bottom: 20px;
+}
+
+header img {
+  width: 100%;
+}
+
+nav {
+  li {
+    list-style: none;
+    text-align: right;
+  }
+
+  a {
+    color: #999;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: none;
+      color: #DE8FDC;
+    }
+  }
+}
+
+.burger{ /* création du burger en css */
+  display: none; /* affiché pour les tablettes et smartphones */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #DE8FDC;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display:block;
+    width: 25px;
+    height: 4px;
+    background-color: #DE8FDC;
+    transform: translateX(-50%) translateY(-50%);
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 25px;
+      height: 4px;
+      transform: translateY(-8px);
+      background-color: #DE8FDC;
+    }
+
+    &:after {
+      transform: translateY(8px);
+    }
+  }
+}
+
+/****************************************************************************\
+                               Footer
+\****************************************************************************/
+footer{
+  color: #CCC;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+}
+
+/****************************************************************************\
+                               Media Queries
+\****************************************************************************/
+
+@media screen and (max-width: 1040px) { /* Media query pour les tablettes et inférieurs */
+  .burger {
+    display:block;
+  }
+
+  nav {
+
+  }
+
+  ul {
+    position: absolute;
+    background-color: rgba(243, 241, 241, 1);
+    top: -900px;
+    right:10px;
+    width: 30%;
+    padding: 0;
+    transition: 0.3s;
+  }
+
+  .AffMenu { /* classe pour afficher le menu responsive avec le burger*/
+    border-top: 1px solid rgba(0,0,0,0.2);
+    top: 110px;
+  }
+
+  nav li {
+    height: 30px;
+    padding: 10px;
+    line-height: 100%;
+  }
+}
+
+@media screen and (max-width: 545px){
+  .AffMenu {
+    top: 90px;
+  }
+}
+
+@media (min-width: 992px) {
+  nav a {
+    font-size: 30px;
+  }
+}

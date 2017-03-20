@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <section class="col-sm-9">
+        <h1>{{ page.title }}</h1>
+
+        <article>
+            {{ page.content | raw }}
+        </article>
+    </section>
+{% endblock %}

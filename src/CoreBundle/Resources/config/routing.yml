@@ -1,0 +1,38 @@
+core_homepage:
+    path:     /
+    defaults: { _controller: CoreBundle:Default:index }
+
+add_page:
+    path:     /ajouter
+    defaults: { _controller: CoreBundle:Default:add }
+
+edit_page:
+    path:     /editer/{id}
+    defaults: { _controller: CoreBundle:Default:edit }
+    requirements:
+        id: \d+
+
+galery_index:
+    path:     /galery
+    defaults: { _controller: CoreBundle:Galery:index }
+
+add_galery:
+    path:     /addgalery
+    defaults: { _controller: CoreBundle:Galery:add }
+
+edit_galery:
+    path:     /editg/{id}
+    defaults: { _controller: CoreBundle:Galery:edit }
+    requirements:
+        id: \d+
+
+delete_galery:
+    path:     /deleteg/{id}
+    defaults: { _controller: CoreBundle:Galery:delete }
+    requirements:
+        id: \d+
+
+show_page:
+    path:    /{slug}
+    defaults:
+        _controller: CoreBundle:Default:show

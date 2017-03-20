@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <section class="col-sm-9">
+        <h1>Création d'une galerie de photos</h1>
+
+        <form action="{{ path('add_galery') }}" method="POST" enctype="multipart/form-data">
+            <div>{{ form_row(form.title) }}<br></div>
+            <div>{{ form_row(form.description) }}<br></div>
+            <div>{{ form_row(form.private) }}<br></div>
+            <div>
+                {{ form_row(form.images) }}
+                <a href="#" id="add_image" class="btn btn-success">Ajouter une image</a><br><br>
+            </div>
+            {{ form_widget(form._token) }}
+            <div>{{ form_row(form.save) }}<br></div>
+        </form>
+
+    </section>
+{% endblock %}

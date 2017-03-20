@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <section class="col-sm-9">
+        <form action="{{ path('add_page') }}" method="post">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+        </form>
+    </section>
+{% endblock %}

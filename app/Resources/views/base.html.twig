@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="google-site-verification" content="MwX0EN58r7EXH2nsXlRVicRDYUBU8Q2cY7crhJHTCsY" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        {% block socialMeta %}{% endblock %}
+        <title>{% block title %}Lucile Ortega{% endblock %}</title>
+        {% block stylesheets %}
+            <!-- Bootstrap -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}" >
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-16519728-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+
+        <!-- swf à supprimer au profit de JS -->
+        <script type="text/javascript" src="{{ asset('swfobject.js') }}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="row">
+                <img src="{{ asset('./images/entete%20bule%20rose.png') }}" alt="header">
+                <!-- affiche burger pour tab et smartphone -->
+                <div class="burger">
+                    <span></span>
+                </div>
+            </header>
+
+            <!-- affichage des messages flash -->
+            {% if app.session.flashBag.has('success') %}
+                <div class="alert alert-success">
+                    {% for msg in app.session.flashBag.get('success') %}
+                        {{ msg }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="row">
+
+                {% block body %}{% endblock %}
+
+                {% block nav %}
+                    <nav class="col-sm-3">
+                        <!-- caché pour tab et smartphone -->
+                        <ul>
+
+                            {% block navBundle %}
+                                {{ render(controller('CoreBundle:Default:menu')) }}
+                            {% endblock navBundle %}
+                            <li><a href="#">Portraits</a></li>
+                            <li><a href="#">Mariages</a></li>
+                            <li><a href="#">Reportages</a></li>
+                            <li><a href="#">Formations</a></li>
+                            <li><a href="#">A Propos</a></li>
+                            <li><a href="https://lucileortega.wordpress.com/" target="new">Le Blog</a></li>
+                            <li><a href="#">Liens</a></li>
+                        </ul>
+                    </nav>
+                {% endblock %}
+
+            </div>
+
+            <footer>
+                <p>Site créé par Greg</p>
+            </footer>
+        </div>
+        {% block javascripts %}
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
+
+            {% if form is defined %}
+            <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+            <!-- insertion de TinyMCE-->
+            <script>
+                tinymce.init({
+                    selector:'.tinymce',
+                    menubar: false,
+                    plugins: [
+                        "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                        "table contextmenu directionality emoticons template textcolor paste textcolor colorpicker textpattern"
+                    ],
+                    toolbar1: "undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | formatselect fontselect fontsizeselect",
+                    toolbar2: "cut copy paste | searchreplace | outdent indent blockquote | link unlink image | forecolor backcolor | table | hr charmap emoticons | print | spellchecker pagebreak",
+                    block_formats: 'Paragraphe=p;Titre 1=h1;Titre 2=h2;Titre 3=h3;Titre 4=h4;Titre 5=h5;Titre 6=h6;Préformaté=pre'
+                })
+            </script>
+            {% endif %}
+        {% endblock %}
+    </body>
+</html>

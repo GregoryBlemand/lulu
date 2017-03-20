@@ -1,0 +1,20 @@
+@charset "UTF-8";
+*{box-sizing:border-box}
+a{text-decoration:none;color:#000}
+body{background-color:#e5e5e5;font-family:"Century Gothic"}
+.container{position:relative;border:1px solid #000;background-color:#fff}
+header img{width:100%}
+nav li{list-style:none;text-align:right}
+nav a{color:#999;text-decoration:none}
+nav a:hover{text-decoration:none;color:#DE8FDC}
+.burger{display:none;position:relative;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);border:1px solid #DE8FDC;border-radius:5px;height:40px;width:40px}
+.burger span{position:absolute;top:50%;left:50%;display:block;width:25px;height:4px;background-color:#DE8FDC;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
+.burger span:after,.burger span:before{content:'';position:absolute;top:0;left:0;display:block;width:25px;height:4px;-webkit-transform:translateY(-8px);-ms-transform:translateY(-8px);transform:translateY(-8px);background-color:#DE8FDC}
+.burger span:after{-webkit-transform:translateY(8px);-ms-transform:translateY(8px);transform:translateY(8px)}
+footer{color:#CCC;text-align:center;font-size:15px;padding:20px}
+@media screen and (max-width:1040px){.burger{display:block}
+ul{position:absolute;background-color:#f3f1f1;top:-900px;right:10px;width:30%;padding:0;-webkit-transition:.3s;transition:.3s}
+.AffMenu{border-top:1px solid rgba(0,0,0,.2);top:35%}
+nav li{height:30px;padding:10px;line-height:100%}}
+@media screen and (max-width:545px){.AffMenu{top:27%}}
+@media (min-width:992px){nav a{font-size:30px}}
