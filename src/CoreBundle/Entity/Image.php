@@ -179,7 +179,7 @@ class Image
 
         // Si on avait déjà un fichier, on le supprime pour éviter les fichiers orphelins
         if(null !== $this->tempFilename){
-            $oldFile = $this->getUploadRootDir().'/'.$this->tempFilename;
+            $oldFile = $this->getUploadDir().'/'.$this->tempFilename;
             if(file_exists($oldFile)){
                 unlink($oldFile);
             }
@@ -195,7 +195,7 @@ class Image
     public function preRemoveUpload()
     {
         // On sauvegarde temporairement le nom du fichier
-        $this->tempFilename = $this->getUploadRootDir().'/'.$this->url;
+        $this->tempFilename = $this->getUploadDir().'/'.$this->url;
     }
 
     /**

@@ -10,13 +10,18 @@
             <div>{{ form_row(form.private) }}<br></div>
             <div>
                 {% for image in images %}
-                    <p>
-                        <img src="{{ asset('uploads/images/' ~ image.url) }}" alt="{{ image.alt }}">
-                    </p>
+                    <div class="row">
+                        <p class="col-sm-9">
+                            <img src="{{ asset('uploads/images/' ~ image.url) }}" alt="{{ image.alt }}" width="100%"><br>
+                        </p>
+                        <p class="col-sm-3">
+                            <a href="#" class="btn btn-danger">Supprimer l'image</a>
+                        </p>
+                    </div>
                 {% endfor %}
             </div>
             <div>
-                {{ form_row(form.images) }}
+                <div id="corebundle_galerie_images" data-prototype="<div><label class=&quot;required&quot;>__name__label__</label><div id=&quot;corebundle_galerie_images___name__&quot;><div><label for=&quot;corebundle_galerie_images___name___file&quot; class=&quot;required&quot;>Envoyer des images :</label><input type=&quot;file&quot; id=&quot;corebundle_galerie_images___name___file&quot; name=&quot;corebundle_galerie[images][__name__][file]&quot; required=&quot;required&quot; class=&quot;form-control&quot; /></div><div><label for=&quot;corebundle_galerie_images___name___alt&quot;>text alternatif :</label><input type=&quot;text&quot; id=&quot;corebundle_galerie_images___name___alt&quot; name=&quot;corebundle_galerie[images][__name__][alt]&quot; class=&quot;form-control&quot; /></div></div></div>"></div>
                 <a href="#" id="add_image" class="btn btn-success">Ajouter une image</a><br><br>
             </div>
             {{ form_widget(form._token) }}
