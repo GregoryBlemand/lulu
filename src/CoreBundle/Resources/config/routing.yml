@@ -2,6 +2,10 @@ core_homepage:
     path:     /
     defaults: { _controller: CoreBundle:Default:index }
 
+core_adminpage:
+    path:     /admin
+    defaults: { _controller: CoreBundle:Default:admin }
+
 add_page:
     path:     /ajouter
     defaults: { _controller: CoreBundle:Default:add }
@@ -9,6 +13,12 @@ add_page:
 edit_page:
     path:     /editer/{id}
     defaults: { _controller: CoreBundle:Default:edit }
+    requirements:
+        id: \d+
+
+delete_page:
+    path:     /delete/{id}
+    defaults: { _controller: CoreBundle:Default:delete }
     requirements:
         id: \d+
 

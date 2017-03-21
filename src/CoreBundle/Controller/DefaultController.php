@@ -20,7 +20,8 @@ class DefaultController extends Controller
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      */
-    public function addAction(Request $request){
+    public function addAction(Request $request)
+    {
         $em = $this->getDoctrine()->getManager();
 
         $p = new Page();
@@ -46,7 +47,8 @@ class DefaultController extends Controller
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      */
-    public function editAction($id, Request $request){
+    public function editAction($id, Request $request)
+    {
         $em = $this->getDoctrine()->getManager();
 
         $page = $em->getRepository('CoreBundle:Page')->find($id);
@@ -78,11 +80,27 @@ class DefaultController extends Controller
     }
 
     /**
+     * Fonction de suppression d'une page
+     * @param $id
+     */
+    public function deleteAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $page = $em->getRepository('CoreBundle:Page')->find($id);
+
+        $em->remove($page);
+        $em->flush();
+
+        return $this->redirectToRoute('core_adminpage');
+    }
+
+    /**
      * Affichage d'une page selon son slug
      * @param $slug
      * @return Response
      */
-    public function showAction($slug){
+    public function showAction($slug)
+    {
 
         $em = $this->getDoctrine()->getManager();
         $page = $em->getRepository('CoreBundle:Page')->findOneBy(array('slug' => $slug));
@@ -92,7 +110,20 @@ class DefaultController extends Controller
         ));
     }
 
-    public function menuAction(){
+    public function adminAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $galeries = $em->getRepository('CoreBundle:Galerie')->findAll();
+        $pages = $em->getRepository('CoreBundle:Page')->findAll();
+
+        return $this->render('CoreBundle:Default:admin.html.twig', array(
+            'galeries' => $galeries,
+            'pages'    => $pages
+        ));
+    }
+
+    public function menuAction()
+    {
         // modif à apporter : gérer le menu comme une liste de liens internes ou pas selon le slug
 
         $em = $this->getDoctrine()->getManager();

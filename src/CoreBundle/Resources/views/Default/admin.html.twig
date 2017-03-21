@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <section class="col-sm-9">
+        <!-- partie galeries -->
+        <div>
+            <p><a href="{{ path('add_galery') }}" class="btn btn-info pull-right">Ajouter une galerie</a></p>
+        </div>
+        {% if galeries is defined %}
+            <table class="table table-bordered">
+                <thead>
+                <td width="60%">nom de la galerie</td>
+                <td>Editer</td>
+                <td>Supprimer</td>
+                </thead>
+                <tbody>
+                {% for galery in galeries %}
+                    <tr>
+                        <td>{{ galery.title }}</td>
+                        <td><a href="{{ path('edit_galery', {'id': galery.id}) }}">edit</a></td>
+                        <td><a href="{{ path('delete_galery', {'id': galery.id}) }}">suppr</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="well">Aucune galerie créée</div>
+        {% endif %}
+
+        <!-- partie pages -->
+        <div>
+            <p><a href="{{ path('add_page') }}" class="btn btn-info pull-right">Ajouter une page</a></p>
+        </div>
+        {% if pages is defined %}
+            <table class="table table-bordered">
+                <thead>
+                <td width="60%">nom de la page</td>
+                <td>Editer</td>
+                <td>Supprimer</td>
+                </thead>
+                <tbody>
+                {% for page in pages %}
+                    <tr>
+                        <td>{{ page.title }}</td>
+                        <td><a href="{{ path('edit_page', {'id': page.id}) }}">edit</a></td>
+                        <td><a href="{{ path('delete_page', {'id': page.id}) }}">suppr</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="well">Aucune page créée</div>
+        {% endif %}
+    </section>
+{% endblock %}

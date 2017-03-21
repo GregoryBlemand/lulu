@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
 use CoreBundle\Entity\Galerie;
 use CoreBundle\Form\GalerieType;
-use CoreBundle\Form\GalerieEditType;
 
 class GaleryController extends Controller
 {
@@ -23,6 +22,11 @@ class GaleryController extends Controller
         ));
     }
 
+    /**
+     * Fonction d'ajout d'une galerie
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     */
     public function addAction(Request $request)
     {
         $galery = new Galerie();
@@ -32,6 +36,7 @@ class GaleryController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $galery = $form->getData();
+
             // On récupère les images envoyées
             $files = $galery->getImages();
             foreach ($files as $file) { // on leur assigne ma galerie courante
@@ -50,6 +55,12 @@ class GaleryController extends Controller
         return $this->render('CoreBundle:Galery:add.html.twig', array('form' => $form->createView()));
     }
 
+    /**
+     * Fonction d'edition d'une galerie
+     * @param $id
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     */
     public function editAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -63,6 +74,7 @@ class GaleryController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $galery = $form->getData();
             // On récupère les images envoyées
+
             $files = $galery->getImages();
             foreach ($files as $file) { // on leur assigne ma galerie courante
                 $file->setGalerie($galery);
@@ -84,6 +96,11 @@ class GaleryController extends Controller
         ));
     }
 
+    /**
+     * Fonction de suppression d'une galerie
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function deleteAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -92,9 +109,14 @@ class GaleryController extends Controller
         $em->remove($galery);
         $em->flush();
 
-        return $this->redirectToRoute('galery_index');
+        return $this->redirectToRoute('core_adminpage');
     }
 
+    /**
+     * Fonction de suppression d'une image d'une galerie
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function deleteImgAction($id)
     {
         $em = $this->getDoctrine()->getManager();
