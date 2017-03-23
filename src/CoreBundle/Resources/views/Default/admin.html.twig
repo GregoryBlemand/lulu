@@ -6,7 +6,7 @@
         <div>
             <p><a href="{{ path('add_galery') }}" class="btn btn-info pull-right">Ajouter une galerie</a></p>
         </div>
-        {% if galeries is defined %}
+        {% if galeries %}
             <table class="table table-bordered">
                 <thead>
                 <td width="60%">nom de la galerie</td>
@@ -31,7 +31,7 @@
         <div>
             <p><a href="{{ path('add_page') }}" class="btn btn-info pull-right">Ajouter une page</a></p>
         </div>
-        {% if pages is defined %}
+        {% if pages %}
             <table class="table table-bordered">
                 <thead>
                 <td width="60%">nom de la page</td>

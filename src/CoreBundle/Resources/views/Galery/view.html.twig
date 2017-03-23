@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/viewer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/galery.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section class="col-sm-9">
+        <div class="docs-galley">
+            <ul class="docs-pictures clearfix">
+                {% if galerie %}
+                    {% for image in galerie.images %}
+                    <li {% if loop.index > 9 %} style="display: none" {% endif %}><img data-original="{{ asset('uploads/images/') ~ image.url }}" src="{{ asset('uploads/thumbs/') ~ image.url }}" alt="{{ image.alt }}"></li>
+                    {% endfor %}
+                {% else %}
+                <li><p>la galerie n'a pas pu être chargée !</p></li>
+                {% endif %}
+            </ul>
+        </div>
+    </section>
+{% endblock %}

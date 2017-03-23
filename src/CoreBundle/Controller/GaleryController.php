@@ -136,5 +136,15 @@ class GaleryController extends Controller
 
         return $this->redirectToRoute('edit_galery', array('id' => $galery->getId()));
     }
+
+    public function viewAction(){
+        $em = $this->getDoctrine()->getManager();
+        $galerie = $em->getRepository('CoreBundle:Galerie')->find(20);
+
+
+        return $this->render('CoreBundle:Galery:view.html.twig', array(
+            'galerie' => $galerie
+        ));
+    }
 }
 

@@ -24,7 +24,7 @@ delete_page:
 
 galery_index:
     path:     /galery
-    defaults: { _controller: CoreBundle:Galery:index }
+    defaults: { _controller: CoreBundle:Galery:view }
 
 add_galery:
     path:     /addgalery

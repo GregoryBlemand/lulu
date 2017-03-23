@@ -163,7 +163,9 @@ class Image
 
         // On crée un nom de fichier unique et on l'enregistre
         $fileName = md5(uniqid()).'.'.$this->file->guessExtension();
+        // $fileName = $this->file->getClientOriginalName();
         $this->url = $fileName;
+
     }
 
     /**
@@ -187,6 +189,10 @@ class Image
 
         // On déplace le fichier envoyé dans le répertoire de notre choix
         $this->file->move($this->getUploadDir(), $this->url);
+
+        // création de la miniature
+        $this->creerMin();
+
     }
 
     /**
@@ -207,6 +213,10 @@ class Image
         if (file_exists($this->tempFilename)) {
             // On supprime le fichier
             unlink($this->tempFilename);
+            // et sa miniature
+            if (file_exists('uploads/thumbs/' . $this->url)) {
+                unlink('uploads/thumbs/' . $this->url);
+            }
         }
     }
 
@@ -226,4 +236,53 @@ class Image
     {
         return $this->getUploadDir().'/'.$this->url;
     }
+
+    private function creerMin($mlargeur=283,$mhauteur=283) {
+        $nom = $this->url;
+        $dimension = getimagesize($this->getWebPath());
+
+        $extension = strtolower($this->file->getClientOriginalExtension());
+
+        switch ($extension) {
+            case 'jpeg':$image = imagecreatefromjpeg($this->getUploadDir().'/'.$nom); break;
+            case 'jpg': $image = imagecreatefromjpeg($this->getUploadDir().'/'.$nom); break;
+            case 'png': $image = imagecreatefrompng($this->getUploadDir().'/'.$nom); break;
+            case 'gif': $image = imagecreatefromgif($this->getUploadDir().'/'.$nom); break;
+            default : return false;
+        }
+
+        $miniature = imagecreatetruecolor($mlargeur,$mhauteur);
+
+        if($dimension[0]>($mlargeur/$mhauteur)*$dimension[1]) {
+            $dimY = $mhauteur;
+            $dimX = $mhauteur*$dimension[0]/$dimension[1];
+            $decalX = -($dimX-$mlargeur)/2;
+            $decalY = 0;
+        }
+        if($dimension[0]<($mlargeur/$mhauteur)*$dimension[1]) {
+            $dimX = $mlargeur;
+            $dimY = $mlargeur*$dimension[1]/$dimension[0];
+            $decalY = -($dimY-$mhauteur)/2;
+            $decalX=0;
+        }
+        if($dimension[0]==($mlargeur/$mhauteur)*$dimension[1]) {
+            $dimX = $mlargeur;
+            $dimY = $mhauteur;
+            $decalX = 0;
+            $decalY = 0;
+        }
+
+        imagecopyresampled($miniature, $image, $decalX, $decalY, 0, 0, $dimX, $dimY, $dimension[0], $dimension[1]);
+
+        $chemin = 'uploads/thumbs';
+        switch ($extension) {
+            case 'jpeg':imagejpeg($miniature, $chemin . "/" . $nom, 100); break;
+            case 'jpg': imagejpeg($miniature, $chemin . "/" . $nom, 100); break;
+            case 'png': imagepng($miniature, $chemin . "/" . $nom, 100); break;
+            case 'gif': imagegif($miniature, $chemin . "/" . $nom); break;
+            default : return false;
+        }
+        return true;
+    }
+
 }

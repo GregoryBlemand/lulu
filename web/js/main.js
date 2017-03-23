@@ -4,7 +4,7 @@ $('.burger').click(function(e){
     $('nav ul').toggleClass('AffMenu');
 });
 
-/**********************             Ajout de champs image                  ************************/
+/**********************             Ajout de champs image dans les formulaires de galerie                  ************************/
 $(document).ready(function() {
     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
     var $container = $('div#corebundle_galerie_images');
@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
 
     // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle galerie par exemple).
-    if (index == 0) {
+    if (index == 0 && $container.length > 0) {
         addImage($container);
     } else {
         // S'il existe déjà des images, on ajoute un lien de suppression pour chacune d'entre elles
@@ -77,5 +77,44 @@ $(document).ready(function() {
         $('#suppr').trigger('click');
         $('#add_image').trigger('click');
     }
+
+
+    /**********************             Gestion de l'affichage des galeries               ************************/
+    var $images = $('.docs-pictures');
+    var options = {
+        inline: true,
+        movable: false,
+        zoomable: false,
+        rotatable: false,
+        scalable: false,
+        title: false,
+        url: 'data-original',
+        build: function (e) {
+            console.log(e.type);
+        },
+        built: function (e) {
+            console.log(e.type);
+        },
+        show: function (e) {
+            console.log(e.type);
+        },
+        shown: function (e) {
+            console.log(e.type);
+        },
+        hide: function (e) {
+            console.log(e.type);
+        },
+        hidden: function (e) {
+            console.log(e.type);
+        },
+        view: function (e) {
+            console.log(e.type);
+        },
+        viewed: function (e) {
+            console.log(e.type);
+        }
+    };
+
+    $images.viewer(options);
 
 });

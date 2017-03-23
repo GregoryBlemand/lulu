@@ -70,7 +70,7 @@
                             {% block navBundle %}
                                 {{ render(controller('CoreBundle:Default:menu')) }}
                             {% endblock navBundle %}
-                            <li><a href="#">Portraits</a></li>
+                            <li><a href="{{ path('core_adminpage') }}">Admin</a></li>
                             <li><a href="#">Mariages</a></li>
                             <li><a href="#">Reportages</a></li>
                             <li><a href="#">Formations</a></li>
@@ -91,6 +91,7 @@
             <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <script src="{{ asset('js/viewer.js') }}"></script>
             <script src="{{ asset('js/main.js') }}"></script>
 
             {% if form is defined %}
