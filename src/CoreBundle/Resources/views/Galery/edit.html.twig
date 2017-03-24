@@ -8,6 +8,9 @@
             <div>{{ form_row(form.title) }}<br></div>
             <div>{{ form_row(form.description) }}<br></div>
             <div>{{ form_row(form.private) }}<br></div>
+            <!-- zone de drag'n'drop -->
+            <div class="dropzone my-dropzone" id="form_snippet_image" action="{{ path('ajax_snippet_image_send', {'id' : galerie.id }) }}"></div>
+            <!-- fin de zone -->
             <div>
                 <h2>Ajout de nouvelles images</h2>
                 <div id="corebundle_galerie_images" data-prototype="<div><label class=&quot;required&quot;>__name__label__</label><div id=&quot;corebundle_galerie_images___name__&quot;><div><label for=&quot;corebundle_galerie_images___name___file&quot; class=&quot;required&quot;>Envoyer des images :</label><input type=&quot;file&quot; id=&quot;corebundle_galerie_images___name___file&quot; name=&quot;corebundle_galerie[images][__name__][file]&quot; required=&quot;required&quot; class=&quot;form-control&quot; multiple=&quot;multiple&quot; /></div><div><label for=&quot;corebundle_galerie_images___name___alt&quot;>text alternatif :</label><input type=&quot;text&quot; id=&quot;corebundle_galerie_images___name___alt&quot; name=&quot;corebundle_galerie[images][__name__][alt]&quot; class=&quot;form-control&quot; value=&quot;Lucile Ortega - Photographie&quot;/></div></div></div>"></div>
@@ -16,10 +19,10 @@
             <div>
                 {% for image in images %}
                     <div class="row">
-                        <p class="col-sm-9">
-                            <img src="{{ asset('uploads/images/' ~ image.url) }}" alt="{{ image.alt }}" width="100%"><br>
+                        <p class="col-sm-6">
+                            <img src="{{ asset('uploads/images/' ~ image.url) }}" alt="{{ image.alt }}" width="50%"><br>
                         </p>
-                        <p class="col-sm-3">
+                        <p class="col-sm-6">
                             <a href="{{ path('delete_image', {'id' : image.id}) }}" class="btn btn-danger">Supprimer l'image</a>
                         </p>
                         <div class="col-sm-12">

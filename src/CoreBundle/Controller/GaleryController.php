@@ -2,6 +2,7 @@
 
 namespace CoreBundle\Controller;
 
+use CoreBundle\Entity\Image;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\File;
@@ -145,6 +146,27 @@ class GaleryController extends Controller
         return $this->render('CoreBundle:Galery:view.html.twig', array(
             'galerie' => $galerie
         ));
+    }
+
+    public function ajaxSnippetImageSendAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $g = $em->getRepository('CoreBundle:Galerie')->find($id);
+
+        $image = new Image();
+        $media = $request->files->get('file');
+
+        $image->setFile($media);
+        $image->setAlt('Lucile Ortega - Photographie');
+
+        // il faut ajouter l'image à la galerie
+        $g->addImage($image);
+
+        $em->flush();
+
+        //infos sur le document envoyé
+        var_dump($request->files->get('file'));die;
+        return new JsonResponse(array('success' => true));
     }
 }
 

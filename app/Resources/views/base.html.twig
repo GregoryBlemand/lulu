@@ -19,6 +19,7 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
             <![endif]-->
             <link rel="stylesheet" href="{{ asset('css/style.css') }}" >
+            <link rel="stylesheet" href="{{ asset('css/dropzone.css') }}" >
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
@@ -36,8 +37,7 @@
 
         </script>
 
-        <!-- swf à supprimer au profit de JS -->
-        <script type="text/javascript" src="{{ asset('swfobject.js') }}"></script>
+        <script src="{{ asset('js/dropzone.js') }}"></script>
     </head>
     <body>
         <div class="container">

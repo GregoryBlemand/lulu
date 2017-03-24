@@ -25,6 +25,7 @@ class GalerieType extends AbstractType
             ))
             ->add('description', TextareaType::class, array(
                 'label' => 'Description :',
+                'required' => false,
                 'attr'  => array('class' => 'form-control tinymce')
             ))
             ->add('private', CheckboxType::class, array(
@@ -38,7 +39,7 @@ class GalerieType extends AbstractType
             ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Enregistrer',
-                'attr'  => array('class' => 'btn btn-primary')
+                'attr'  => array('class' => 'btn btn-primary pull-right')
             ));
     }
     

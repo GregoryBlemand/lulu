@@ -6,6 +6,10 @@ core_adminpage:
     path:     /admin
     defaults: { _controller: CoreBundle:Default:admin }
 
+ajax_snippet_image_send:
+    path:     /ajax/snippet/image/send/{id}
+    defaults: { _controller: CoreBundle:Galery:ajaxSnippetImageSend }
+
 add_page:
     path:     /ajouter
     defaults: { _controller: CoreBundle:Default:add }
