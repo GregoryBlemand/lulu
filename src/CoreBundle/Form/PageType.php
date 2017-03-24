@@ -32,6 +32,7 @@ class PageType extends AbstractType
             ))
             ->add('tags', TextType::class, array(
                 'label' => 'Mots Clés de recherche :',
+                'required' => false,
                 'attr'  => array('class' => 'form-control')
             ))
             ->add('publication')

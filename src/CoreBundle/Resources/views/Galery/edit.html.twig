@@ -9,6 +9,11 @@
             <div>{{ form_row(form.description) }}<br></div>
             <div>{{ form_row(form.private) }}<br></div>
             <div>
+                <h2>Ajout de nouvelles images</h2>
+                <div id="corebundle_galerie_images" data-prototype="<div><label class=&quot;required&quot;>__name__label__</label><div id=&quot;corebundle_galerie_images___name__&quot;><div><label for=&quot;corebundle_galerie_images___name___file&quot; class=&quot;required&quot;>Envoyer des images :</label><input type=&quot;file&quot; id=&quot;corebundle_galerie_images___name___file&quot; name=&quot;corebundle_galerie[images][__name__][file]&quot; required=&quot;required&quot; class=&quot;form-control&quot; multiple=&quot;multiple&quot; /></div><div><label for=&quot;corebundle_galerie_images___name___alt&quot;>text alternatif :</label><input type=&quot;text&quot; id=&quot;corebundle_galerie_images___name___alt&quot; name=&quot;corebundle_galerie[images][__name__][alt]&quot; class=&quot;form-control&quot; value=&quot;Lucile Ortega - Photographie&quot;/></div></div></div>"></div>
+                <a href="#" id="add_image" class="btn btn-success">Ajouter une image</a><br><br>
+            </div>
+            <div>
                 {% for image in images %}
                     <div class="row">
                         <p class="col-sm-9">
@@ -24,11 +29,6 @@
                         </div>
                     </div>
                 {% endfor %}
-            </div>
-            <div>
-                <h2>Ajout de nouvelles images</h2>
-                <div id="corebundle_galerie_images" data-prototype="<div><label class=&quot;required&quot;>__name__label__</label><div id=&quot;corebundle_galerie_images___name__&quot;><div><label for=&quot;corebundle_galerie_images___name___file&quot; class=&quot;required&quot;>Envoyer des images :</label><input type=&quot;file&quot; id=&quot;corebundle_galerie_images___name___file&quot; name=&quot;corebundle_galerie[images][__name__][file]&quot; required=&quot;required&quot; class=&quot;form-control&quot; multiple=&quot;multiple&quot; /></div><div><label for=&quot;corebundle_galerie_images___name___alt&quot;>text alternatif :</label><input type=&quot;text&quot; id=&quot;corebundle_galerie_images___name___alt&quot; name=&quot;corebundle_galerie[images][__name__][alt]&quot; class=&quot;form-control&quot; /></div></div></div>"></div>
-                <a href="#" id="add_image" class="btn btn-success">Ajouter une image</a><br><br>
             </div>
             {{ form_widget(form._token) }}
             <div>{{ form_row(form.save) }}<br></div>

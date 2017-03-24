@@ -65,6 +65,7 @@ class DefaultController extends Controller
             return $this->redirectToRoute('edit_page', array('id' => $page->getId()));
         }
 
+        // à supprimer
         $pages = $em->getRepository('CoreBundle:Page')->findAll();
         foreach ($pages as $p){
             $p->setPublication(true);

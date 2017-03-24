@@ -25,7 +25,7 @@ class GalerieType extends AbstractType
             ))
             ->add('description', TextareaType::class, array(
                 'label' => 'Description :',
-                'attr'  => array('class' => 'form-control')
+                'attr'  => array('class' => 'form-control tinymce')
             ))
             ->add('private', CheckboxType::class, array(
                 'label' => 'Rendre la galerie privée : ',
