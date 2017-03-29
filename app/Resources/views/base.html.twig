@@ -37,7 +37,6 @@
 
         </script>
 
-        <script src="{{ asset('js/dropzone.js') }}"></script>
     </head>
     <body>
         <div class="container">
@@ -66,16 +65,13 @@
                     <nav class="col-sm-3">
                         <!-- caché pour tab et smartphone -->
                         <ul>
-
-                            {% block navBundle %}
-                                {{ render(controller('CoreBundle:Default:menu')) }}
-                            {% endblock navBundle %}
-                            <li><a href="{{ path('core_adminpage') }}">Admin</a></li>
-                            <li><a href="#">Mariages</a></li>
-                            <li><a href="#">Reportages</a></li>
-                            <li><a href="#">Formations</a></li>
-                            <li><a href="https://lucileortega.wordpress.com/" target="new">Le Blog</a></li>
-                            <li><a href="#">Partenaires</a></li>
+                            <li><a href="{{ path('core_homepage') }}">Accueil</a></li>
+                            <li><a href="{{ path('show_page', {'slug': 'portraits'}) }}">Portraits</a></li>
+                            <li><a href="{{ path('show_page', {'slug': 'mariages'}) }}">Mariages</a></li>
+                            <li><a href="{{ path('show_page', {'slug': 'reportages'}) }}">Reportages</a></li>
+                            <li><a href="{{ path('show_page', {'slug': 'formations'}) }}">Formations</a></li>
+                            <li><a href="https://lucileortega.wordpress.com/" target="_blank">Le Blog</a></li>
+                            <li><a href="{{ path('show_page', {'slug': 'partenaires'}) }}">Partenaires</a></li>
                         </ul>
                     </nav>
                 {% endblock %}
@@ -83,7 +79,7 @@
             </div>
 
             <footer>
-                <p>Site créé par Greg</p>
+                <p>Site créé par Greg | <a href="{{ path('core_adminpage') }}">Admin</a></p>
             </footer>
         </div>
         {% block javascripts %}

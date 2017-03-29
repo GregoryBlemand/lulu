@@ -4,18 +4,6 @@
     <section class="col-sm-9">
         <form action="{{ path('edit_page', {'id': page.id}) }}" method="post">
             {{ form_widget(form) }}
-            <input type="submit">
         </form>
-
-        <h1>Les pages créées</h1>
-
-        {% for p in pages %}
-            <article>
-                <h2>{{ p.title }}</h2>
-                <div>{{ p.content|raw }}</div>
-            </article>
-        {% else %}
-            <div>Pas de page pour l'instant</div>
-        {% endfor %}
     </section>
 {% endblock %}

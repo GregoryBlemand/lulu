@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use CoreBundle\Entity\Galerie;
 use CoreBundle\Form\GalerieType;
 
@@ -165,7 +166,7 @@ class GaleryController extends Controller
         $em->flush();
 
         //infos sur le document envoyé
-        var_dump($request->files->get('file'));die;
+        //var_dump($request->files->get('file'));die;
         return new JsonResponse(array('success' => true));
     }
 }

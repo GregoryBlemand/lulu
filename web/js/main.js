@@ -118,6 +118,8 @@ $(document).ready(function() {
     $images.viewer(options);
 
     /**********************             démarrage du drag'n'drop d'upload de fichiers               ************************/
+/* ce code ne sert à rien car la dropzone et déclarée sur la div qui a la class dropzone
+Je le garde au cas où je change de métode
 
 //je récupère l'action où sera traité l'upload en PHP
     var _actionToDropZone = $("#form_snippet_image").attr('action');
@@ -129,5 +131,7 @@ $(document).ready(function() {
     myDropzone.on("addedfile", function(file) {
         alert('nouveau fichier reçu');
     });
+
+    */
 });
 

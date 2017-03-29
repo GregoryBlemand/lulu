@@ -42,12 +42,6 @@ class Lien
      */
     private $ordre;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="target", type="string", length=255)
-     */
-    private $target;
 
     /**
      * @var string
@@ -140,30 +134,6 @@ class Lien
     }
 
     /**
-     * Set target
-     *
-     * @param string $target
-     *
-     * @return Lien
-     */
-    public function setTarget($target)
-    {
-        $this->target = $target;
-
-        return $this;
-    }
-
-    /**
-     * Get target
-     *
-     * @return string
-     */
-    public function getTarget()
-    {
-        return $this->target;
-    }
-
-    /**
      * Set type
      *
      * @param string $type
@@ -187,4 +157,3 @@ class Lien
         return $this->type;
     }
 }
-

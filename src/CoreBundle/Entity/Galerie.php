@@ -4,6 +4,7 @@ namespace CoreBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Galerie
@@ -27,6 +28,9 @@ class Galerie
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
+     *
+     * @Assert\Length(min=5, minMessage="Le titre doit faire au moins {{ limit }} caractères.")
+     * @Assert\NotBlank(message="Il faut donner un titre à la galerie")
      */
     private $title;
 
@@ -46,6 +50,8 @@ class Galerie
 
     /**
      * @ORM\OneToMany(targetEntity="CoreBundle\Entity\Image", cascade={"persist", "remove"}, mappedBy="galerie")
+     *
+     * @Assert\Valid()
      */
     private $images;
 
@@ -136,7 +142,7 @@ class Galerie
      */
     public function __construct()
     {
-        $this->images = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->images = new ArrayCollection();
     }
 
     /**

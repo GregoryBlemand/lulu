@@ -1,6 +1,0 @@
-{% for lien in listeLiens %}
-    <li><a href="{{ path('show_page', {'slug' : lien.slug} ) }}">{{ lien.title }}</a></li>
-{% else %}
-    <li>Pas (encore !) de menu en plus</li>
-{% endfor %}
-<li>--------</li>

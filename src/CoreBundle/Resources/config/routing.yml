@@ -10,6 +10,12 @@ ajax_snippet_image_send:
     path:     /ajax/snippet/image/send/{id}
     defaults: { _controller: CoreBundle:Galery:ajaxSnippetImageSend }
 
+# Gestion du menu
+add_link:
+    path:     /addlink
+    defaults: { _controller: CoreBundle:Menu:add }
+
+# Gestion des pages
 add_page:
     path:     /ajouter
     defaults: { _controller: CoreBundle:Default:add }
@@ -26,6 +32,7 @@ delete_page:
     requirements:
         id: \d+
 
+# Gestion des galeries
 galery_index:
     path:     /galery
     defaults: { _controller: CoreBundle:Galery:view }

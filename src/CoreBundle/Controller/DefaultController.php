@@ -65,16 +65,7 @@ class DefaultController extends Controller
             return $this->redirectToRoute('edit_page', array('id' => $page->getId()));
         }
 
-        // à supprimer
-        $pages = $em->getRepository('CoreBundle:Page')->findAll();
-        foreach ($pages as $p){
-            $p->setPublication(true);
-            $em->persist($p);
-        }
-        $em->flush();
-
         return $this->render('CoreBundle:Default:edit.html.twig', array(
-            'pages' => $pages,
             'page'     => $page,
             'form'  => $form->createView()
         ));
@@ -102,12 +93,35 @@ class DefaultController extends Controller
      */
     public function showAction($slug)
     {
-
         $em = $this->getDoctrine()->getManager();
         $page = $em->getRepository('CoreBundle:Page')->findOneBy(array('slug' => $slug));
 
+        if($slug == 'mariages'){
+            $galerie = $em->getRepository('CoreBundle:Galerie')->find(20);
+
+            return $this->render('CoreBundle:Galery:view.html.twig', array(
+                'galerie' => $galerie
+            ));
+        }
+
+        if($slug == 'portraits'){
+            $galerie = $em->getRepository('CoreBundle:Galerie')->find(25);
+
+            return $this->render('CoreBundle:Galery:view.html.twig', array(
+                'galerie' => $galerie
+            ));
+        }
+
+        if($slug == 'reportages'){
+            $galerie = $em->getRepository('CoreBundle:Galerie')->find(26);
+
+            return $this->render('CoreBundle:Galery:view.html.twig', array(
+                'galerie' => $galerie
+            ));
+        }
+
         return $this->render('CoreBundle:Default:show.html.twig', array(
-            'page' => $page
+            'page'    => $page,
         ));
     }
 
@@ -116,22 +130,12 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $galeries = $em->getRepository('CoreBundle:Galerie')->findAll();
         $pages = $em->getRepository('CoreBundle:Page')->findAll();
+        $liens = $em->getRepository('CoreBundle:Lien')->findAll();
 
         return $this->render('CoreBundle:Default:admin.html.twig', array(
             'galeries' => $galeries,
-            'pages'    => $pages
-        ));
-    }
-
-    public function menuAction()
-    {
-        // modif à apporter : gérer le menu comme une liste de liens internes ou pas selon le slug
-
-        $em = $this->getDoctrine()->getManager();
-        $listeLiens = $em->getRepository('CoreBundle:Page')->findAll();
-
-        return $this->render('CoreBundle:Default:menu.html.twig', array(
-            'listeLiens' => $listeLiens
+            'pages'    => $pages,
+            'liens'    => $liens
         ));
     }
 }

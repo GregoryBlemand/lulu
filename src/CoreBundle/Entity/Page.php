@@ -3,6 +3,7 @@
 namespace CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Page
@@ -32,6 +33,8 @@ class Page
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     *
+     * @Assert\NotBlank(message="La page a besoin d'un titre.")
      */
     private $title;
 
@@ -46,6 +49,8 @@ class Page
      * @var string
      *
      * @ORM\Column(name="content", type="text")
+     *
+     * @Assert\NotBlank(message="Une page vide ne sert à rien ! Ecrivez quelques mots...")
      */
     private $content;
 

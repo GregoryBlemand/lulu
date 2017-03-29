@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <section class="col-sm-9">
+        {{ form_start(form) }}
+        <div>{{ form_row(form.title) }}<br></div>
+        <div>{{ form_row(form.type) }}<br></div>
+        <div>{{ form_row(form.url) }}<br></div>
+        <div>{{ form_row(form.save) }}<br></div>
+        {{ form_end(form) }}
+    </section>
+{% endblock %}

@@ -19,7 +19,7 @@ class ImageType extends AbstractType
         $builder
             ->add('file', FileType::class, array(
                 'label' => 'Envoyer des images :',
-                'attr'  => array('class' => 'form-control', 'multiple' => true)
+                'attr'  => array('class' => 'form-control')
             ))
             ->add('alt', TextType::class, array(
                 'label' => 'text alternatif :',

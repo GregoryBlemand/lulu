@@ -37,7 +37,7 @@ nav li {
   list-style: none;
   text-align: right;
 }
-nav a {
+nav a, nav a:focus {
   color: #999;
   text-decoration: none;
 }
@@ -115,7 +115,7 @@ footer {
   .AffMenu {
     /* classe pour afficher le menu responsive avec le burger*/
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    top: 35%;
+    top: 120px;
   }
 
   nav li {
@@ -126,7 +126,7 @@ footer {
 }
 @media screen and (max-width: 545px) {
   .AffMenu {
-    top: 27%;
+    top: 110px;
   }
 }
 @media (min-width: 992px) {

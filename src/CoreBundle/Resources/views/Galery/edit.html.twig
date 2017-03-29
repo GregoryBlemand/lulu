@@ -39,3 +39,8 @@
 
     </section>
 {% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/dropzone.js') }}"></script>
+    {{ parent() }}
+{% endblock %}

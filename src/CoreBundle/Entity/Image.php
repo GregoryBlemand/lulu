@@ -4,6 +4,7 @@ namespace CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Image
@@ -23,10 +24,12 @@ class Image
      */
     private $id;
 
+    // à vrai dire $url devrait s'appeler $name
     /**
      * @var string
      *
      * @ORM\Column(name="url", type="string", length=255)
+     *
      */
     private $url;
 
@@ -42,6 +45,16 @@ class Image
      */
     private $galerie;
 
+    /**
+     * @var
+     *
+     * @Assert\Image(
+     *     mimeTypesMessage="Ce fichier n'est pas une image valide.",
+     *     maxSize="60M",
+     *     maxSizeMessage="Ce fichier est trop gros pour être envoyé. Le fichier doit faire au maximum {{ limit }} {{ suffix }}"
+     * )
+     *
+     */
     private $file;
 
     // On ajoute cet attribut pour y stocker le nom du fichier temporairement

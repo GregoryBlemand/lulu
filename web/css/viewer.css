@@ -418,6 +418,12 @@
   }
 }
 
+@media (max-width: 1040px) {
+  .viewer-container {
+    position: relative;
+  }
+}
+
 @media (max-width: 1199px) {
   .viewer-hide-md-down {
     display: none;
