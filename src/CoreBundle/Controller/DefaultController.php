@@ -5,8 +5,10 @@ namespace CoreBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use CoreBundle\Entity\Page;
 use CoreBundle\Form\PageType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class DefaultController extends Controller
 {
@@ -19,6 +21,8 @@ class DefaultController extends Controller
      * Fonction de création d'une page
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     *
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function addAction(Request $request)
     {
@@ -46,12 +50,19 @@ class DefaultController extends Controller
      * @param $id
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     *
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function editAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $page = $em->getRepository('CoreBundle:Page')->find($id);
+
+        if(!$page){
+            throw new Exception('La page demandée n\'a pas été trouvée.');
+        }
+
         $form = $this->createForm('CoreBundle\Form\PageType', $page);
 
         $form->handleRequest($request);
@@ -74,11 +85,17 @@ class DefaultController extends Controller
     /**
      * Fonction de suppression d'une page
      * @param $id
+     *
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function deleteAction($id)
     {
         $em = $this->getDoctrine()->getManager();
         $page = $em->getRepository('CoreBundle:Page')->find($id);
+
+        if(!$page){
+            throw new Exception('La page demandée n\'a pas été trouvée.');
+        }
 
         $em->remove($page);
         $em->flush();
@@ -88,6 +105,7 @@ class DefaultController extends Controller
 
     /**
      * Affichage d'une page selon son slug
+     * A gérer avec modification du schema entités
      * @param $slug
      * @return Response
      */
@@ -99,6 +117,10 @@ class DefaultController extends Controller
         if($slug == 'mariages'){
             $galerie = $em->getRepository('CoreBundle:Galerie')->find(20);
 
+            if(!$galerie){
+                throw new Exception('La galerie demandée n\'a pas été trouvée.');
+            }
+
             return $this->render('CoreBundle:Galery:view.html.twig', array(
                 'galerie' => $galerie
             ));
@@ -107,6 +129,10 @@ class DefaultController extends Controller
         if($slug == 'portraits'){
             $galerie = $em->getRepository('CoreBundle:Galerie')->find(25);
 
+            if(!$galerie){
+                throw new Exception('La galerie demandée n\'a pas été trouvée.');
+            }
+
             return $this->render('CoreBundle:Galery:view.html.twig', array(
                 'galerie' => $galerie
             ));
@@ -114,6 +140,10 @@ class DefaultController extends Controller
 
         if($slug == 'reportages'){
             $galerie = $em->getRepository('CoreBundle:Galerie')->find(26);
+
+            if(!$galerie){
+                throw new Exception('La galerie demandée n\'a pas été trouvée.');
+            }
 
             return $this->render('CoreBundle:Galery:view.html.twig', array(
                 'galerie' => $galerie
@@ -125,6 +155,11 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * @return Response
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function adminAction()
     {
         $em = $this->getDoctrine()->getManager();

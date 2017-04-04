@@ -12,22 +12,22 @@ ajax_snippet_image_send:
 
 # Gestion du menu
 add_link:
-    path:     /addlink
+    path:     /admin/addlink
     defaults: { _controller: CoreBundle:Menu:add }
 
 # Gestion des pages
 add_page:
-    path:     /ajouter
+    path:     /admin/ajouter
     defaults: { _controller: CoreBundle:Default:add }
 
 edit_page:
-    path:     /editer/{id}
+    path:     /admin/editer/{id}
     defaults: { _controller: CoreBundle:Default:edit }
     requirements:
         id: \d+
 
 delete_page:
-    path:     /delete/{id}
+    path:     /admin/delete/{id}
     defaults: { _controller: CoreBundle:Default:delete }
     requirements:
         id: \d+
@@ -38,23 +38,23 @@ galery_index:
     defaults: { _controller: CoreBundle:Galery:view }
 
 add_galery:
-    path:     /addgalery
+    path:     /admin/addgalery
     defaults: { _controller: CoreBundle:Galery:add }
 
 edit_galery:
-    path:     /editg/{id}
+    path:     /admin/editg/{id}
     defaults: { _controller: CoreBundle:Galery:edit }
     requirements:
         id: \d+
 
 delete_galery:
-    path:     /deleteg/{id}
+    path:     /admin/deleteg/{id}
     defaults: { _controller: CoreBundle:Galery:delete }
     requirements:
         id: \d+
 
 delete_image:
-    path:     /deleteimg/{id}
+    path:     /admin/deleteimg/{id}
     defaults: { _controller: CoreBundle:Galery:deleteImg }
     requirements:
         id: \d+

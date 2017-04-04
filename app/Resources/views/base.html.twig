@@ -6,6 +6,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <META NAME="TITLE" CONTENT="Lucile Ortega Photographe">
+        <META NAME="DESCRIPTION" CONTENT="Photographe professionnelle, je viens fixer les émotions de votre mariage, vos portraits, la naissance de votre enfant ou encore vos photos de famille. Je propose également des formations et des interventions photo">
+        <META NAME="KEYWORDS" CONTENT="Lucile Ortega, photographe, Annonay, rhône-alpes, Ardèche, portrait, portraitiste, portraits d'enfants, mariage, mariages, portraits mariages, portrait couple, maternité, photographie evenementielle, artiste photographe, paysage, drôme, isère, loire, rhône, lyon, valence, saint etienne, vienne">
+        <META NAME="SUBJECT" CONTENT="photos de lucile ortega, portfolio">
+        <META NAME="CATEGORY" CONTENT="Art, Photographie, Portfolio">
+        <META NAME="AUTHOR" CONTENT="Lucile Ortega">
+        <META NAME="REPLY-TO" CONTENT="Lucile Ortega">
+        <META NAME="REVISIT-AFTER" CONTENT="31 DAYS">
+        <META NAME="LANGUAGE" CONTENT="FR">
+        <META NAME="COPYRIGHT" CONTENT="Lucile Ortega">
+        <META NAME="ROBOTS" CONTENT="All">
+
         {% block socialMeta %}{% endblock %}
         <title>{% block title %}Lucile Ortega{% endblock %}</title>
         {% block stylesheets %}
@@ -79,7 +92,14 @@
             </div>
 
             <footer>
-                <p>Site créé par Greg | <a href="{{ path('core_adminpage') }}">Admin</a></p>
+                <p>
+                    Site créé par Greg |
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <a href="{{ path('fos_user_security_logout') }}">se connecter</a>
+                    {% else %}
+                        <a href="{{ path('core_adminpage') }}">se connecter</a>
+                    {% endif %}
+                </p>
             </footer>
         </div>
         {% block javascripts %}

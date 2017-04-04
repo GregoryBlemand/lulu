@@ -4,30 +4,22 @@ namespace CoreBundle\Controller;
 
 use CoreBundle\Entity\Image;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use CoreBundle\Entity\Galerie;
 use CoreBundle\Form\GalerieType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class GaleryController extends Controller
 {
-    public function indexAction(Request $request)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $galeries = $em->getRepository('CoreBundle:Galerie')->findAll();
-
-        return $this->render('CoreBundle:Galery:index.html.twig', array(
-            'galeries' => $galeries
-        ));
-    }
-
     /**
      * Fonction d'ajout d'une galerie
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     *
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function addAction(Request $request)
     {
@@ -62,11 +54,18 @@ class GaleryController extends Controller
      * @param $id
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     *
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function editAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $galery = $em->getRepository('CoreBundle:Galerie')->find($id);
+
+        if(!$galery){
+            throw new Exception('La galerie à éditer est introuvable.');
+        }
+
         $form = $this->createForm(GalerieType::class, $galery);
 
         $files = $galery->getImages();
@@ -102,11 +101,17 @@ class GaleryController extends Controller
      * Fonction de suppression d'une galerie
      * @param $id
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     *
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function deleteAction($id)
     {
         $em = $this->getDoctrine()->getManager();
         $galery = $em->getRepository('CoreBundle:Galerie')->find($id);
+
+        if(!$galery){
+            throw new Exception('La galerie à supprimer est introuvable.');
+        }
 
         $em->remove($galery);
         $em->flush();
@@ -118,6 +123,8 @@ class GaleryController extends Controller
      * Fonction de suppression d'une image d'une galerie
      * @param $id
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     *
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function deleteImgAction($id)
     {
@@ -125,6 +132,11 @@ class GaleryController extends Controller
 
         // On récupère l'image et sa galerie associée
         $img = $em->getRepository('CoreBundle:Image')->find($id);
+
+        if(!$img){
+            throw new Exception('L\'image à supprimer est introuvable.');
+        }
+
         $galery = $img->getGalerie();
 
         // On retire l'image de la galerie
@@ -139,20 +151,38 @@ class GaleryController extends Controller
         return $this->redirectToRoute('edit_galery', array('id' => $galery->getId()));
     }
 
+    /**
+     * Fonction d'affichage d'une galerie
+     *
+     * @return Response
+     */
     public function viewAction(){
         $em = $this->getDoctrine()->getManager();
         $galerie = $em->getRepository('CoreBundle:Galerie')->find(20);
 
+        if(!$galerie){
+            throw new Exception('La galerie demandée n\'a pas été trouvée.');
+        }
 
         return $this->render('CoreBundle:Galery:view.html.twig', array(
             'galerie' => $galerie
         ));
     }
 
+    /**
+     * Fonction d'upload ajax d'image dans une galerie
+     * @param $id de la galerie courante
+     * @param Request $request
+     * @return JsonResponse
+     */
     public function ajaxSnippetImageSendAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $g = $em->getRepository('CoreBundle:Galerie')->find($id);
+
+        if(null === $g){
+            throw new Exception("Galerie demandée inconnue...");
+        }
 
         $image = new Image();
         $media = $request->files->get('file');
