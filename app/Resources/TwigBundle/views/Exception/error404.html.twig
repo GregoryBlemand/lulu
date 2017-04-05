@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<section class="col-sm-9">
+    <div>
+        <h1>Oups ! Je n'ai pas réussi à trouver la page demandée !</h1>
+        <h2>La page demandée n'a pas été trouvée. Veuillez vérifier l'adresse fournie.</h2>
+        <p><strong><a href="{{ path('core_homepage') }}">Ou cliquez ici pour retourner à l'accueil du site...</a></strong></p>
+    </div>
+</section>
+{% endblock %}

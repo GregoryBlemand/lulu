@@ -33,9 +33,11 @@ delete_page:
         id: \d+
 
 # Gestion des galeries
-galery_index:
-    path:     /galery
+galery_view:
+    path:     /galery/{id}
     defaults: { _controller: CoreBundle:Galery:view }
+    requirements:
+            id: \d+
 
 add_galery:
     path:     /admin/addgalery

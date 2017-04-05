@@ -5,10 +5,11 @@ namespace CoreBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Config\Definition\Exception\Exception;
 use CoreBundle\Entity\Page;
 use CoreBundle\Form\PageType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
 {
@@ -59,8 +60,8 @@ class DefaultController extends Controller
 
         $page = $em->getRepository('CoreBundle:Page')->find($id);
 
-        if(!$page){
-            throw new Exception('La page demandée n\'a pas été trouvée.');
+        if($page === null){
+            throw new BadRequestHttpException('La page demandée n\'a pas été trouvée.');
         }
 
         $form = $this->createForm('CoreBundle\Form\PageType', $page);
@@ -93,8 +94,9 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $page = $em->getRepository('CoreBundle:Page')->find($id);
 
-        if(!$page){
-            throw new Exception('La page demandée n\'a pas été trouvée.');
+        if($page === null){
+            // envoie une erreur 400 mauvaise requète http
+            throw new BadRequestHttpException('La page demandée n\'a pas été trouvée.');
         }
 
         $em->remove($page);
@@ -115,39 +117,20 @@ class DefaultController extends Controller
         $page = $em->getRepository('CoreBundle:Page')->findOneBy(array('slug' => $slug));
 
         if($slug == 'mariages'){
-            $galerie = $em->getRepository('CoreBundle:Galerie')->find(20);
-
-            if(!$galerie){
-                throw new Exception('La galerie demandée n\'a pas été trouvée.');
-            }
-
-            return $this->render('CoreBundle:Galery:view.html.twig', array(
-                'galerie' => $galerie
-            ));
+            return $this->redirectToRoute('galery_view', array('id' => 20));
         }
 
         if($slug == 'portraits'){
-            $galerie = $em->getRepository('CoreBundle:Galerie')->find(25);
-
-            if(!$galerie){
-                throw new Exception('La galerie demandée n\'a pas été trouvée.');
-            }
-
-            return $this->render('CoreBundle:Galery:view.html.twig', array(
-                'galerie' => $galerie
-            ));
+            return $this->redirectToRoute('galery_view', array('id' => 25));
         }
 
         if($slug == 'reportages'){
-            $galerie = $em->getRepository('CoreBundle:Galerie')->find(26);
+            return $this->redirectToRoute('galery_view', array('id' => 26));
+        }
 
-            if(!$galerie){
-                throw new Exception('La galerie demandée n\'a pas été trouvée.');
-            }
-
-            return $this->render('CoreBundle:Galery:view.html.twig', array(
-                'galerie' => $galerie
-            ));
+        if($page === null){
+            // envoie une erreur 404 page non-trouvée
+            throw new NotFoundHttpException();
         }
 
         return $this->render('CoreBundle:Default:show.html.twig', array(

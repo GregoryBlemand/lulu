@@ -4,13 +4,13 @@ namespace CoreBundle\Controller;
 
 use CoreBundle\Entity\Image;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use CoreBundle\Entity\Galerie;
 use CoreBundle\Form\GalerieType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class GaleryController extends Controller
 {
@@ -62,8 +62,8 @@ class GaleryController extends Controller
         $em = $this->getDoctrine()->getManager();
         $galery = $em->getRepository('CoreBundle:Galerie')->find($id);
 
-        if(!$galery){
-            throw new Exception('La galerie à éditer est introuvable.');
+        if($galery === null){
+            throw new BadRequestHttpException('La galerie à éditer est introuvable.');
         }
 
         $form = $this->createForm(GalerieType::class, $galery);
@@ -109,8 +109,8 @@ class GaleryController extends Controller
         $em = $this->getDoctrine()->getManager();
         $galery = $em->getRepository('CoreBundle:Galerie')->find($id);
 
-        if(!$galery){
-            throw new Exception('La galerie à supprimer est introuvable.');
+        if($galery === null){
+            throw new BadRequestHttpException('La galerie à supprimer est introuvable.');
         }
 
         $em->remove($galery);
@@ -133,8 +133,8 @@ class GaleryController extends Controller
         // On récupère l'image et sa galerie associée
         $img = $em->getRepository('CoreBundle:Image')->find($id);
 
-        if(!$img){
-            throw new Exception('L\'image à supprimer est introuvable.');
+        if($img === null){
+            throw new BadRequestHttpException('L\'image à supprimer est introuvable.');
         }
 
         $galery = $img->getGalerie();
@@ -156,12 +156,12 @@ class GaleryController extends Controller
      *
      * @return Response
      */
-    public function viewAction(){
+    public function viewAction($id){
         $em = $this->getDoctrine()->getManager();
-        $galerie = $em->getRepository('CoreBundle:Galerie')->find(20);
+        $galerie = $em->getRepository('CoreBundle:Galerie')->find($id);
 
-        if(!$galerie){
-            throw new Exception('La galerie demandée n\'a pas été trouvée.');
+        if($galerie === null){
+            throw new BadRequestHttpException('La galerie demandée n\'a pas été trouvée.');
         }
 
         return $this->render('CoreBundle:Galery:view.html.twig', array(
@@ -181,7 +181,7 @@ class GaleryController extends Controller
         $g = $em->getRepository('CoreBundle:Galerie')->find($id);
 
         if(null === $g){
-            throw new Exception("Galerie demandée inconnue...");
+            throw new BadRequestHttpException("Galerie demandée inconnue...");
         }
 
         $image = new Image();

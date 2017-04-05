@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+    {% block body %}
+        <section class="col-sm-9">
+            <h1>Oups ! Il y a eu un problème !</h1>
+            <h2>Le serveur a retourné : "{{ status_code }} {{ status_text }}".</h2>
+
+            <div>
+                Quelque chose est cassé. Dites nous ce qui vous avez fait juste avant.
+                Nous allons résoudre cette erreur rapidement.
+            </div>
+        </section>
+    {% endblock %}
