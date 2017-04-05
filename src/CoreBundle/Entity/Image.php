@@ -176,7 +176,6 @@ class Image
 
         // On crée un nom de fichier unique et on l'enregistre
         $fileName = md5(uniqid()).'.'.$this->file->guessExtension();
-        // $fileName = $this->file->getClientOriginalName();
         $this->url = $fileName;
 
     }
@@ -239,17 +238,17 @@ class Image
         return 'uploads/images';
     }
 
-    protected function getUploadRootDir()
-    {
-        // On retourne le chemin relatif vers l'image pour notre code PHP
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
-    }
-
     public function getWebPath()
     {
         return $this->getUploadDir().'/'.$this->url;
     }
 
+    /**
+     * Fonction de création d'une miniature durant l'upload d'image
+     * @param int $mlargeur
+     * @param int $mhauteur
+     * @return bool
+     */
     private function creerMin($mlargeur=283,$mhauteur=283) {
         $nom = $this->url;
         $dimension = getimagesize($this->getWebPath());

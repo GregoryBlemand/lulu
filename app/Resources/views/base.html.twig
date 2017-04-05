@@ -93,9 +93,9 @@
 
             <footer>
                 <p>
-                    Site créé par Greg |
+                    <a href="http://gregory.blemand.free.fr/" target="_blank">Site réalisé par Greg Blémand</a> |
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a href="{{ path('fos_user_security_logout') }}">se connecter</a>
+                        <a href="{{ path('fos_user_security_logout') }}">se déconnecter</a>
                     {% else %}
                         <a href="{{ path('core_adminpage') }}">se connecter</a>
                     {% endif %}

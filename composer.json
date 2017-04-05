@@ -1,4 +1,5 @@
 {
+    "description": "Projet symfony 3 - site pour photographe",
     "name": "grgory/site",
     "license": "proprietary",
     "type": "project",
