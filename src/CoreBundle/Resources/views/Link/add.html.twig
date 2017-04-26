@@ -3,10 +3,73 @@
 {% block body %}
     <section class="col-sm-9">
         {{ form_start(form) }}
-        <div>{{ form_row(form.title) }}<br></div>
         <div>{{ form_row(form.type) }}<br></div>
         <div>{{ form_row(form.url) }}<br></div>
+        <div>{{ form_row(form.page) }}<br></div>
+        <div>{{ form_row(form.galerie) }}<br></div>
+        <div>{{ form_row(form.title) }}<br></div>
         <div>{{ form_row(form.save) }}<br></div>
         {{ form_end(form) }}
     </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function(){
+            $type = $('#corebundle_lien_type');
+            $url = $('#corebundle_lien_url');
+            $page = $('#corebundle_lien_page');
+            $galerie = $('#corebundle_lien_galerie');
+
+            $url.attr('disabled', true);
+            $galerie.attr('disabled', true);
+            $page.attr('disabled', true);
+
+            // au changement sur $type, supprimer le required sur tous les champs sauf sur le type choisi, focus sur le type choisi
+            $type.change(function(){
+                switch ($type.val()){
+                   case 'PAGE':
+                       $url.attr('required', false).attr('disabled', true);
+                       $galerie.attr('required', false).attr('disabled', true);
+                       $('#corebundle_lien_title')[0].value = '';
+                       $page.attr('required', true).attr('disabled', false);
+                       $page.focus();
+                       break;
+
+                   case 'GALERIE':
+                       $url.attr('required', false).attr('disabled', true);
+                       $page.attr('required', false).attr('disabled', true);
+                       $('#corebundle_lien_title')[0].value = '';
+                       $galerie.attr('required', true).attr('disabled', false);
+                       $galerie.focus();
+                       break;
+
+                   case 'EXTERNE':
+                       $page.attr('required', false).attr('disabled', true);
+                       $galerie.attr('required', false).attr('disabled', true);
+                       $('#corebundle_lien_title')[0].value = '';
+                       $url.attr('required', true).attr('disabled', false);
+                       $url.focus();
+                       break;
+
+                   default:
+                       $url.attr('required', true).attr('disabled', false);
+                       $page.attr('required', true).attr('disabled', false);
+                       $galerie.attr('required', true).attr('disabled', false);
+                       $('#corebundle_lien_title')[0].value = '';
+                       console.log('sélectionnez un champs valide')
+               }
+            });
+
+            // au changement de $page et $galerie, on prérempli le titre du lien
+            $page.change(function(){
+                $('#corebundle_lien_title')[0].value = $page[0].selectedOptions[0].innerText;
+            });
+
+            $galerie.change(function(){
+                $('#corebundle_lien_title')[0].value = $galerie[0].selectedOptions[0].innerText;
+            });
+        })
+    </script>
 {% endblock %}

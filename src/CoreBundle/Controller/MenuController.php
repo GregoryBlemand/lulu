@@ -21,29 +21,44 @@ class MenuController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $link = $form->getData();
 
-            // persister la galerie (et en cascade, les images)
-            $em->persist($link);
-            $em->flush();
+            $compte = $em->getRepository('CoreBundle:Lien')->getNbLiens();
+            if($link->getOrdre() === null ){
+                $link->setOrdre((int)$compte[0][1] + 1);
+            }
+            var_dump($link);
+            die();
+
+            // persister le lien
+            //$em->persist($link);
+            //$em->flush();
         }
 
-        $galeries = $em->getRepository('CoreBundle:Galerie')->findAll();
-        $pages = $em->getRepository('CoreBundle:Page')->findAll();
         return $this->render('CoreBundle:Link:add.html.twig', array(
             'form' => $form->createView(),
-            'galeries' => $galeries,
-            'pages' => $pages
         ));
     }
 
     public function editAction(){
-
+        return $this->redirectToRoute('core_adminpage');
     }
 
-    public function supprAction(){
-
+    public function deleteAction(){
+        return $this->redirectToRoute('core_adminpage');
     }
 
     public function viewMenuAction(){
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT lien
+            FROM CoreBundle:Lien lien
+            WHERE lien.ordre != \'null\' 
+            ORDER BY lien.ordre ASC'
+        );
 
+        $liens = $query->getResult();
+
+        return $this->render('CoreBundle:Default:menu.html.twig', array(
+            'liens' => $liens
+        ));
     }
 }

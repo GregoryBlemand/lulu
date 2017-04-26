@@ -21,10 +21,6 @@ class PageType extends AbstractType
                 'label' => 'Titre de la page :',
                 'attr'  => array('class' => 'form-control')
             ))
-            ->add('slug', TextType::class, array(
-                'label' => 'lien vers la page :',
-                'attr'  => array('class' => 'form-control')
-            ))
             ->add('content', TextareaType::class, array(
                 'label' => 'Contenu :',
                 'required' => false,

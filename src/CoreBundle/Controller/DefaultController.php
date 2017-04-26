@@ -2,6 +2,8 @@
 
 namespace CoreBundle\Controller;
 
+use CoreBundle\CoreBundle;
+use CoreBundle\Entity\Lien;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -60,7 +62,7 @@ class DefaultController extends Controller
         $page = $em->getRepository('CoreBundle:Page')->find($id);
 
         if($page === null){
-            throw new BadRequestHttpException('La page demandée n\'a pas été trouvée.');
+            throw new NotFoundHttpException('La page demandée n\'a pas été trouvée.');
         }
 
         $form = $this->createForm('CoreBundle\Form\PageType', $page);
@@ -85,7 +87,8 @@ class DefaultController extends Controller
     /**
      * Fonction de suppression d'une page
      * @param $id
-     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     * 
      * @Security("has_role('ROLE_ADMIN')")
      */
     public function deleteAction($id)
@@ -95,7 +98,7 @@ class DefaultController extends Controller
 
         if($page === null){
             // envoie une erreur 400 mauvaise requète http
-            throw new BadRequestHttpException('La page demandée n\'a pas été trouvée.');
+            throw new NotFoundHttpException('La page demandée n\'a pas été trouvée.');
         }
 
         $em->remove($page);
@@ -105,36 +108,34 @@ class DefaultController extends Controller
     }
 
     /**
-     * Affichage d'une page selon son slug
-     * A gérer avec modification du schema entités
+     * Affichage d'un contenu selon son slug
      * @param $slug
      * @return Response
      */
     public function showAction($slug)
     {
+        // On va chercher dans la table des liens, le slug demandé
         $em = $this->getDoctrine()->getManager();
-        $page = $em->getRepository('CoreBundle:Page')->findOneBy(array('slug' => $slug));
+        $lien = $em->getRepository('CoreBundle:Lien')->findOneBy(array('slug' => $slug));
 
-        if($slug == 'mariages'){
-            return $this->redirectToRoute('galery_view', array('id' => 20));
-        }
-
-        if($slug == 'portraits'){
-            return $this->redirectToRoute('galery_view', array('id' => 25));
-        }
-
-        if($slug == 'reportages'){
-            return $this->redirectToRoute('galery_view', array('id' => 26));
-        }
-
-        if($page === null){
+        if($lien === null){ // on a pas trouvé de lien correspondant
             // envoie une erreur 404 page non-trouvée
             throw new NotFoundHttpException();
         }
 
-        return $this->render('CoreBundle:Default:show.html.twig', array(
-            'page'    => $page,
-        ));
+        if($lien->getType() === 'PAGE'){ // si le lien renvoie à une page, on la rend avec le template de page
+            return $this->render('CoreBundle:Default:show.html.twig', array(
+                'page'    => $lien->getPage()
+            ));
+        } elseif ($lien->getType() === 'GALERIE'){
+
+            // a faire : gérer si la galerie est privée ou non
+
+            return $this->render('CoreBundle:Galery:view.html.twig', array(
+                'galerie' => $lien->getGalerie()
+            ));
+        }
+
     }
 
     /**
@@ -147,7 +148,15 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $galeries = $em->getRepository('CoreBundle:Galerie')->findAll();
         $pages = $em->getRepository('CoreBundle:Page')->findAll();
-        $liens = $em->getRepository('CoreBundle:Lien')->findAll();
+
+        $query = $em->createQuery(
+            'SELECT lien
+            FROM CoreBundle:Lien lien
+            WHERE lien.ordre != \'null\' 
+            ORDER BY lien.ordre ASC'
+        );
+
+        $liens = $query->getResult();
 
         return $this->render('CoreBundle:Default:admin.html.twig', array(
             'galeries' => $galeries,

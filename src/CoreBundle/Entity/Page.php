@@ -39,11 +39,9 @@ class Page
     private $title;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="slug", type="string", length=255, unique=true)
+     * @ORM\OneToOne(targetEntity="CoreBundle\Entity\Lien", cascade={"persist", "remove"}, inversedBy="page")
      */
-    private $slug;
+    private $lien;
 
     /**
      * @var string
@@ -98,30 +96,6 @@ class Page
     public function getTags()
     {
         return $this->tags;
-    }
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     *
-     * @return Page
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Get slug
-     *
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->slug;
     }
 
     /**
@@ -194,5 +168,32 @@ class Page
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set lien
+     *
+     * @param \CoreBundle\Entity\Lien $lien
+     *
+     * @return Page
+     */
+    public function setLien(\CoreBundle\Entity\Lien $lien = null)
+    {
+        $this->lien = $lien;
+        $lien->setTitle($this->getTitle());
+        $lien->setType('PAGE');
+        $lien->setPage($this);
+
+        return $this;
+    }
+
+    /**
+     * Get lien
+     *
+     * @return \CoreBundle\Entity\Lien
+     */
+    public function getLien()
+    {
+        return $this->lien;
     }
 }

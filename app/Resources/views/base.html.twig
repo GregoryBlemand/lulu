@@ -76,7 +76,7 @@
 
                 {% block nav %}
                     <nav class="col-sm-3">
-                        <!-- caché pour tab et smartphone -->
+                        <!-- caché pour tab et smartphone
                         <ul>
                             <li><a href="{{ path('core_homepage') }}">Accueil</a></li>
                             <li><a href="{{ path('show_page', {'slug': 'portraits'}) }}">Portraits</a></li>
@@ -85,7 +85,8 @@
                             <li><a href="{{ path('show_page', {'slug': 'formations'}) }}">Formations</a></li>
                             <li><a href="https://lucileortega.wordpress.com/" target="_blank">Le Blog</a></li>
                             <li><a href="{{ path('show_page', {'slug': 'partenaires'}) }}">Partenaires</a></li>
-                        </ul>
+                        </ul>-->
+                        {{ render(controller("CoreBundle:Menu:viewMenu")) }}
                     </nav>
                 {% endblock %}
 
@@ -93,8 +94,10 @@
 
             <footer>
                 <p>
-                    <a href="http://gregory.blemand.free.fr/" target="_blank">Site réalisé par Greg Blémand</a> |
+                    <a href="http://gregory.blemand.free.fr/" target="_blank">Site réalisé par Greg Blémand</a><br>
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <a href="{{ path('core_adminpage') }}">administration</a>
+                        <br>
                         <a href="{{ path('fos_user_security_logout') }}">se déconnecter</a>
                     {% else %}
                         <a href="{{ path('core_adminpage') }}">se connecter</a>

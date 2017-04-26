@@ -4,8 +4,8 @@ $('.burger').click(function(e){
     $('nav ul').toggleClass('AffMenu');
 });
 
-/**********************             Ajout de champs image dans les formulaires de galerie                  ************************/
 $(document).ready(function() {
+    /**********************             Ajout de champs image dans les formulaires de galerie                  ************************/
     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
     var $container = $('div#corebundle_galerie_images');
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle galerie par exemple).
     if (index == 0 && $container.length > 0) {
-        addImage($container);
+        // addImage($container); finalement je ne l'ajoute pas...
     } else {
         // S'il existe déjà des images, on ajoute un lien de suppression pour chacune d'entre elles
         $container.children('div').each(function() {
@@ -117,6 +117,12 @@ $(document).ready(function() {
 
     $images.viewer(options);
 
+    // on désactive le clic-droit sur les galeries
+    $galerie = $('.docs-galley');
+    $galerie.contextmenu(function (e){ // on attrape l'évenement "menu contextuel"
+        return false;
+    });
+
     /**********************             démarrage du drag'n'drop d'upload de fichiers               ************************/
 /* ce code ne sert à rien car la dropzone et déclarée sur la div qui a la class dropzone
 Je le garde au cas où je change de métode
@@ -133,5 +139,13 @@ Je le garde au cas où je change de métode
     });
 
     */
+
+    $title = $('#corebundle_galerie_title');
+    $title2 = $('#corebundle_galerie_lien_0_title');
+
+    $title.keyup(function(e){
+        $title2[0].value = $title[0].value;
+    });
+
 });
 

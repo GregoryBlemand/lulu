@@ -35,6 +35,11 @@ class Galerie
     private $title;
 
     /**
+     * @ORM\OneToOne(targetEntity="CoreBundle\Entity\Lien", cascade={"persist", "remove"}, inversedBy="galerie")
+     */
+    private $lien;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="description", type="text", nullable=true)
@@ -179,5 +184,32 @@ class Galerie
     public function getImages()
     {
         return $this->images;
+    }
+
+    /**
+     * Set lien
+     *
+     * @param \CoreBundle\Entity\Lien $lien
+     *
+     * @return Galerie
+     */
+    public function setLien(\CoreBundle\Entity\Lien $lien = null)
+    {
+        $this->lien = $lien;
+        $lien->setTitle($this->getTitle());
+        $lien->setType('GALERIE');
+        $lien->setGalerie($this);
+
+        return $this;
+    }
+
+    /**
+     * Get lien
+     *
+     * @return \CoreBundle\Entity\Lien
+     */
+    public function getLien()
+    {
+        return $this->lien;
     }
 }

@@ -32,8 +32,8 @@
         "twig/twig": "^1.0||^2.0",
         "doctrine/doctrine-fixtures-bundle": "~2.3",
         "stfalcon/tinymce-bundle": "2.0",
-        "friendsofsymfony/user-bundle": "dev-master"
-
+        "friendsofsymfony/user-bundle": "dev-master",
+        "stof/doctrine-extensions-bundle": "^1.2.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

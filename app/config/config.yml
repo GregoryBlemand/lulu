@@ -79,3 +79,9 @@ fos_user:
     from_email:
             address: "noreply@lucile-ortega.com"
             sender_name: "Lucile Ortega"
+
+# Stof\DoctrineExtensionsBundle configuration
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true

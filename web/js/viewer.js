@@ -1825,7 +1825,7 @@
     minWidth: 200,
 
     // Min height of the viewer in inline mode
-    minHeight: 100,
+    minHeight: 200,
 
     // Define the ratio when zoom the image by wheeling mouse
     zoomRatio: 0.1,

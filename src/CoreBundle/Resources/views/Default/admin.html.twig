@@ -63,16 +63,20 @@
         {% if liens %}
             <table class="table table-bordered">
                 <thead>
-                <td width="60%">nom de la page</td>
+                <td width="5%">ordre</td>
+                <td width="60%">titre du lien</td>
+                <td>Type</td>
                 <td>Editer</td>
                 <td>Supprimer</td>
                 </thead>
                 <tbody>
                 {% for lien in liens %}
                     <tr>
+                        <td>{{ lien.ordre }}</td>
                         <td>{{ lien.title }}</td>
-                        <td><a href="{{ path('edit_page', {'id': lien.id}) }}">edit</a></td>
-                        <td><a href="{{ path('delete_page', {'id': lien.id}) }}">suppr</a></td>
+                        <td>{{ lien.type }}</td>
+                        <td><a href="{{ path('edit_link', {'id': lien.id}) }}">edit</a></td>
+                        <td><a href="{{ path('delete_link', {'id': lien.id}) }}">suppr</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>

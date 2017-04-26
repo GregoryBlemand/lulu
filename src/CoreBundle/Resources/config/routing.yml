@@ -15,6 +15,14 @@ add_link:
     path:     /admin/addlink
     defaults: { _controller: CoreBundle:Menu:add }
 
+edit_link:
+    path:     /admin/editlink
+    defaults: { _controller: CoreBundle:Menu:edit }
+
+delete_link:
+    path:     /admin/dellink
+    defaults: { _controller: CoreBundle:Menu:delete }
+
 # Gestion des pages
 add_page:
     path:     /admin/ajouter

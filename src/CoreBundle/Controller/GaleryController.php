@@ -3,6 +3,7 @@
 namespace CoreBundle\Controller;
 
 use CoreBundle\Entity\Image;
+use CoreBundle\Entity\Lien;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,6 +12,8 @@ use CoreBundle\Entity\Galerie;
 use CoreBundle\Form\GalerieType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
 
 class GaleryController extends Controller
 {
@@ -30,6 +33,10 @@ class GaleryController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $galery = $form->getData();
+
+            // génération du lien/slug
+            $link = new Lien();
+            $galery->setLien($link);
 
             // On récupère les images envoyées
             $files = $galery->getImages();
@@ -63,7 +70,7 @@ class GaleryController extends Controller
         $galery = $em->getRepository('CoreBundle:Galerie')->find($id);
 
         if($galery === null){
-            throw new BadRequestHttpException('La galerie à éditer est introuvable.');
+            throw new NotFoundHttpException('La galerie à éditer est introuvable.');
         }
 
         $form = $this->createForm(GalerieType::class, $galery);
@@ -110,7 +117,7 @@ class GaleryController extends Controller
         $galery = $em->getRepository('CoreBundle:Galerie')->find($id);
 
         if($galery === null){
-            throw new BadRequestHttpException('La galerie à supprimer est introuvable.');
+            throw new NotFoundHttpException('La galerie à supprimer est introuvable.');
         }
 
         $em->remove($galery);
@@ -134,7 +141,7 @@ class GaleryController extends Controller
         $img = $em->getRepository('CoreBundle:Image')->find($id);
 
         if($img === null){
-            throw new BadRequestHttpException('L\'image à supprimer est introuvable.');
+            throw new NotFoundHttpException('L\'image à supprimer est introuvable.');
         }
 
         $galery = $img->getGalerie();
@@ -161,7 +168,7 @@ class GaleryController extends Controller
         $galerie = $em->getRepository('CoreBundle:Galerie')->find($id);
 
         if($galerie === null){
-            throw new BadRequestHttpException('La galerie demandée n\'a pas été trouvée.');
+            throw new NotFoundHttpException('La galerie demandée n\'a pas été trouvée.');
         }
 
         return $this->render('CoreBundle:Galery:view.html.twig', array(
@@ -181,7 +188,7 @@ class GaleryController extends Controller
         $g = $em->getRepository('CoreBundle:Galerie')->find($id);
 
         if(null === $g){
-            throw new BadRequestHttpException("Galerie demandée inconnue...");
+            throw new NotFoundHttpException("Galerie demandée inconnue...");
         }
 
         $image = new Image();

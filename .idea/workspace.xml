@@ -2,30 +2,643 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af8635be-6cf9-49dc-a89f-4064dd605e48" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/swfobject.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db676710256_db_1and1_com.sql.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet5 - gregory blemand.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/menu.html.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/003.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/004.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/005.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/006.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/007.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/008.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/009.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/010.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/011.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/012.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/013.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/014.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/015.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/016.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/017.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/018.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/019.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/020.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/021.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/022.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/023.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/024.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/025.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/026.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/027.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/028.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/029.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/030.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/031.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/032.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/033.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/034.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/035.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/036.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/037.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/038.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/039.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/040.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/041.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/042.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/043.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/044.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/045.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/046.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/047.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/048.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/049.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/050.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/051.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/052.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/053.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/054.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/055.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/056.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/057.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/058.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/059.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/060.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/061.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/062.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/063.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/064.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/065.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/066.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/067.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/068.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/069.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/070.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/071.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/072.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/073.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/074.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/075.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/076.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/077.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/078.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/079.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/081.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/082.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/083.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/084.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/085.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/086.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/087.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/088.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/089.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/090.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/091.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/092.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/093.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/094.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/095.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/096.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/097.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/098.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/099.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/100.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/101.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/102.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/103.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/104.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/105.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/106.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/107.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/108.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/109.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/110.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/111.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/112.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/113.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/114.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/115.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/116.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/117.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/118.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/119.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/120.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/121.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/122.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/123.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/124.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/125.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/126.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/127.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/129.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/130.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/131.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/132.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/133.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/134.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/135.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/136.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/137.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/138.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/139.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/140.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/141.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/142.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/143.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/144.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/145.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/146.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/147.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/148.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/149.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/150.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/151.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/152.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/153.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/154.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/155.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/156.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/157.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/mariages/158.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/07.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/09.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/28.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/29.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/30.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/31.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/32.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/33.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/34.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/35.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/36.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/37.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/38.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/39.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/41.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/42.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/43.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/44.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/45.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/46.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/47.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/48.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/49.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/51.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/52.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/53.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/54.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/55.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/56.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/57.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/58.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/59.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/60.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/61.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/62.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/63.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/64.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/65.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/66.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/67.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/68.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/portrait/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/.BridgeSort" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/07.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/09.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/07.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/09.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/2013/28.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/28.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/29.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/30.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/31.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/32.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/33.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/34.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/35.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/36.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/37.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/38.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/39.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/41.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/42.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/43.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/44.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/45.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/46.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/47.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/48.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/49.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/51.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/52.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/53.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/54.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/55.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/56.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/57.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/58.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/59.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/60.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/61.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/reportage/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/003.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/004.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/005.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/006.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/007.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/008.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/009.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/010.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/011.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/012.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/013.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/014.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/015.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/016.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/017.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/018.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/019.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/020.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/021.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/022.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/023.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/024.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/025.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/026.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/027.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/028.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/029.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/030.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/031.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/032.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/033.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/034.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/035.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/036.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/037.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/038.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/039.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/040.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/041.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/042.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/043.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/044.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/045.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/046.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/047.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/048.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/049.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/050.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/051.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/052.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/053.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/054.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/055.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/056.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/057.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/058.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/059.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/060.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/061.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/062.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/063.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/064.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/065.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/066.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/067.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/068.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/069.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/070.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/071.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/072.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/073.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/074.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/075.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/076.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/077.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/078.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/079.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/080.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/081.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/082.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/083.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/084.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/085.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/086.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/087.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/088.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/089.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/090.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/091.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/092.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/093.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/094.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/095.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/096.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/097.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/098.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/099.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/100.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/101.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/102.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/103.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/104.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/105.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/106.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/107.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/108.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/109.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/110.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/111.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/112.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/113.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/114.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/115.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/116.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/117.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/118.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/119.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/120.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/121.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/122.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/123.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/124.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/125.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/126.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/127.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/129.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/130.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/131.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/132.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/133.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/134.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/135.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/136.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/137.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/138.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/139.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/140.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/141.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/142.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/143.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/144.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/145.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/146.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/147.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/148.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/149.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/150.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/151.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/152.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/153.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/154.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/155.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/156.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/157.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/158.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/mariages/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/07.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/09.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/28.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/29.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/30.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/31.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/32.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/33.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/34.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/35.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/36.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/37.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/38.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/39.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/41.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/42.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/43.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/44.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/45.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/46.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/47.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/48.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/49.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/51.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/52.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/53.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/54.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/55.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/56.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/57.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/58.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/59.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/60.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/61.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/62.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/63.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/64.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/65.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/66.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/67.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/68.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/portrait/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/07.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/09.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/28.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/29.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/30.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/31.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/32.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/33.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/34.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/35.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/36.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/37.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/38.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/39.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/41.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/42.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/43.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/44.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/45.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/46.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/47.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/48.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/49.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/51.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/52.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/53.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/54.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/55.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/56.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/57.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/58.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/59.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/60.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/61.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/thumbs/reportage/Thumbs.db" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Controller/GaleryController.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Controller/GaleryController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Controller/MenuController.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Controller/MenuController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/Image.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/UserAdmin.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/UserAdmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/EventListener/RegistrationListener.php" afterPath="$PROJECT_DIR$/src/CoreBundle/EventListener/RegistrationListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Form/ImageType.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Form/ImageType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/Galerie.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/Galerie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/Lien.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/Lien.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/Page.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/Page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Form/LienType.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Form/LienType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Form/PageType.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Form/PageType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Repository/LienRepository.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Repository/LienRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/add.html.twig" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/add.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/admin.html.twig" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/admin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/edit.html.twig" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/show.html.twig" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/add.html.twig" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/edit.html.twig" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/edit.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Link/add.html.twig" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/views/Link/add.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/main.js" afterPath="$PROJECT_DIR$/web/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/viewer.js" afterPath="$PROJECT_DIR$/web/js/viewer.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,21 +661,49 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/routing.yml">
+      <file leaf-file-name="MenuController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/MenuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="484">
+              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding>
+                <marker date="1493198299292" expanded="true" signature="1383:1510" ph="SELECT lien CoreBundle" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/add.html.twig">
+      <file leaf-file-name="LienRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Repository/LienRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+              <folding>
+                <marker date="1493196376620" expanded="true" signature="349:413" ph="SELECT COUNT... CoreBundle" />
+                <marker date="1493196376620" expanded="true" signature="349:415" ph="SELECT COUNT... CoreBundle" />
+                <marker date="1493196376620" expanded="true" signature="356:413" ph="SELECT (COUN... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lien.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Lien.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-22">
+              <caret line="50" column="75" lean-forward="false" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+              <folding>
+                <element signature="e#37#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/menu.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,78 +712,18 @@
       <file leaf-file-name="admin.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="447">
+              <caret line="78" column="57" lean-forward="false" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/edit.html.twig">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/add.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/view.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Link/add.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -174,6 +755,7 @@
       <find>100px</find>
       <find>exce</find>
       <find>getUploadRootDir</find>
+      <find>height</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,57 +764,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/CoreBundle/Controller/ImagesController.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/DataTransformer/FilesTransformer.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/ImageTransType.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/GalerieEditType.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/PageType.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/GalerieType.php" />
-        <option value="$PROJECT_DIR$/web/js/dropzone.js" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Lien.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/LienType.php" />
-        <option value="$PROJECT_DIR$/web/js/main.js" />
-        <option value="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/Filesystem.php" />
         <option value="$PROJECT_DIR$/composer.lock" />
         <option value="$PROJECT_DIR$/var/cache/prod/classes.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/view.html.twig" />
         <option value="$PROJECT_DIR$/web/css/viewer.css" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Page.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Galerie.php" />
         <option value="$PROJECT_DIR$/src/MyUserBundle/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/src/MyUserBundle/Resources/views/login.html.twig" />
         <option value="$PROJECT_DIR$/src/MyUserBundle/Resources/views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Repository/User_AdminRepository.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/404.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/404.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Controller/GaleryController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Image.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Form/ImageType.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Controller/MenuController.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Entity/UserAdmin.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/EventListener/RegistrationListener.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/admin.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/add.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/edit.html.twig" />
+        <option value="$PROJECT_DIR$/web/config.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/web/js/viewer.js" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/web/app.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Form/PageType.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Form/GalerieType.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Controller/GaleryController.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Galerie.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Page.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/admin.html.twig" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/main.js" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/menu.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Resources/views/Link/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Form/LienType.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Repository/LienRepository.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Controller/MenuController.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Lien.php" />
       </list>
     </option>
   </component>
@@ -273,6 +855,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,6 +1033,152 @@
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repository" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -516,34 +1276,36 @@
       <workItem from="1489677169897" duration="15964000" />
       <workItem from="1489842989305" duration="58988000" />
       <workItem from="1490020526966" duration="19959000" />
-      <workItem from="1490162422737" duration="156348000" />
+      <workItem from="1490162422737" duration="167345000" />
+      <workItem from="1491459865775" duration="4075000" />
+      <workItem from="1492417246242" duration="58457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275403000" />
+    <option name="totallyTimeSpent" value="348932000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14072494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20585048" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19934994" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3564464" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19934994" sideWeight="0.4936034" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,165 +1316,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MyUserBundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Galerie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding>
-            <element signature="e#37#85#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/doc/index.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/doc/overriding_templates.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-710">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/translations/FOSUserBundle.fr.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ChangePasswordFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="233" column="68" lean-forward="true" selection-start-line="233" selection-start-column="68" selection-end-line="233" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.css.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.json.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.js.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/404.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Exception/NotFoundHttpException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -725,7 +1333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="253" column="6" lean-forward="false" selection-start-line="253" selection-start-column="6" selection-end-line="253" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -733,7 +1340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="61" column="36" lean-forward="false" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,15 +1347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +1354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -769,71 +1365,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/GaleryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="96" column="65" lean-forward="true" selection-start-line="96" selection-start-column="65" selection-end-line="96" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3891">
-          <caret line="177" column="68" lean-forward="false" selection-start-line="177" selection-start-column="68" selection-end-line="177" selection-end-column="68" />
-          <folding>
-            <element signature="e#37#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Form/ImageType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-          <folding>
-            <element signature="e#35#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="81" column="12" lean-forward="false" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +1376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,6 +1383,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/EventListener/RegistrationListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="107" column="12" lean-forward="false" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/viewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1820" column="49" lean-forward="false" selection-start-line="1820" selection-start-column="49" selection-end-line="1820" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="49" lean-forward="false" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -864,55 +1465,47 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/MenuController.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="86" column="27" lean-forward="false" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/UserAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/EventListener/RegistrationListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="579">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -920,56 +1513,229 @@
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Form/PageType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Form/ImageType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3755">
+          <caret line="43" column="105" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Galerie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="198" column="8" lean-forward="false" selection-start-line="198" selection-start-column="8" selection-end-line="200" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="543">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="220">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/GaleryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2618">
+          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding>
+            <element signature="e#41#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1415">
+          <caret line="166" column="1" lean-forward="false" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
+          <folding>
+            <element signature="e#41#67#0#PHP" expanded="true" />
+            <marker date="1493112334572" expanded="true" signature="4832:4913" ph="SELECT lien CoreBundle" />
+            <marker date="1493112334572" expanded="true" signature="4832:4920" ph="SELECT lien CoreBundle" />
+            <marker date="1493112334572" expanded="true" signature="4832:4959" ph="SELECT lien CoreBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Form/LienTypeold.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="44" column="14" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="44" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="154">
+          <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Form/GalerieType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="e#35#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Galery/view.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Default/admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="447">
+          <caret line="78" column="57" lean-forward="false" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/views/Link/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="572">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Form/LienType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding>
+            <element signature="e#35#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="107" column="31" lean-forward="false" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="63" />
+          <folding>
+            <element signature="e#37#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Lien.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="50" column="75" lean-forward="false" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+          <folding>
+            <element signature="e#37#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Repository/LienRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+          <folding>
+            <marker date="1493196376620" expanded="true" signature="349:413" ph="SELECT COUNT... CoreBundle" />
+            <marker date="1493196376620" expanded="true" signature="349:415" ph="SELECT COUNT... CoreBundle" />
+            <marker date="1493196376620" expanded="true" signature="356:413" ph="SELECT (COUN... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/MenuController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <marker date="1493198299292" expanded="true" signature="1383:1510" ph="SELECT lien CoreBundle" />
+          </folding>
         </state>
       </provider>
     </entry>

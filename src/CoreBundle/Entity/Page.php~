@@ -3,6 +3,7 @@
 namespace CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Page
@@ -32,20 +33,22 @@ class Page
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     *
+     * @Assert\NotBlank(message="La page a besoin d'un titre.")
      */
     private $title;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="slug", type="string", length=255, unique=true)
+     * @ORM\OneToOne(targetEntity="CoreBundle\Entity\Lien", inversedBy="page")
      */
-    private $slug;
+    private $lien;
 
     /**
      * @var string
      *
      * @ORM\Column(name="content", type="text")
+     *
+     * @Assert\NotBlank(message="Une page vide ne sert à rien ! Ecrivez quelques mots...")
      */
     private $content;
 
@@ -166,5 +169,28 @@ class Page
     {
         return $this->publication;
     }
-}
 
+    /**
+     * Set title
+     *
+     * @param string $title
+     *
+     * @return Page
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+}

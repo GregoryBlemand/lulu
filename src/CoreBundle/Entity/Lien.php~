@@ -3,6 +3,7 @@
 namespace CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Lien
@@ -29,19 +30,10 @@ class Lien
     private $title;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="url", type="string", length=255)
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
-    private $url;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="ordre", type="integer")
-     */
-    private $ordre;
-
+    private $slug;
 
     /**
      * @var string
@@ -49,6 +41,30 @@ class Lien
      * @ORM\Column(name="type", type="string", length=255)
      */
     private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
+     */
+    private $url;
+
+    /**
+     * @ORM\OneToOne(targetEntity="CoreBundle\Entity\Page", mappedBy="lien")
+     */
+    private $page;
+
+    /**
+     * @ORM\OneToOne(targetEntity="CoreBundle\Entity\Galerie", mappedBy="lien")
+     */
+    private $galerie;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="ordre", type="integer")
+     */
+    private $ordre;
 
 
     /**
@@ -134,30 +150,6 @@ class Lien
     }
 
     /**
-     * Set target
-     *
-     * @param string $target
-     *
-     * @return Lien
-     */
-    public function setTarget($target)
-    {
-        $this->target = $target;
-
-        return $this;
-    }
-
-    /**
-     * Get target
-     *
-     * @return string
-     */
-    public function getTarget()
-    {
-        return $this->target;
-    }
-
-    /**
      * Set type
      *
      * @param string $type
@@ -181,4 +173,3 @@ class Lien
         return $this->type;
     }
 }
-

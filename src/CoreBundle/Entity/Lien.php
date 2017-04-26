@@ -3,6 +3,8 @@
 namespace CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Lien
@@ -25,23 +27,15 @@ class Lien
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
+     * @Assert\NotBlank(message="Le lien a besoin d'un titre.")
      */
     private $title;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="url", type="string", length=255)
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
-    private $url;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="ordre", type="integer")
-     */
-    private $ordre;
-
+    private $slug;
 
     /**
      * @var string
@@ -49,6 +43,31 @@ class Lien
      * @ORM\Column(name="type", type="string", length=255)
      */
     private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
+     * @Assert\Url(message= "L'adresse {{ value }} n'est pas une URL valide")
+     */
+    private $url;
+
+    /**
+     * @ORM\OneToOne(targetEntity="CoreBundle\Entity\Page", mappedBy="lien")
+     */
+    private $page;
+
+    /**
+     * @ORM\OneToOne(targetEntity="CoreBundle\Entity\Galerie", mappedBy="lien")
+     */
+    private $galerie;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="ordre", type="integer", nullable=true)
+     */
+    private $ordre;
 
 
     /**
@@ -155,5 +174,77 @@ class Lien
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Lien
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set page
+     *
+     * @param \CoreBundle\Entity\Page $page
+     *
+     * @return Lien
+     */
+    public function setPage(\CoreBundle\Entity\Page $page = null)
+    {
+        $this->page = $page;
+
+        return $this;
+    }
+
+    /**
+     * Get page
+     *
+     * @return \CoreBundle\Entity\Page
+     */
+    public function getPage()
+    {
+        return $this->page;
+    }
+
+    /**
+     * Set galerie
+     *
+     * @param \CoreBundle\Entity\Galerie $galerie
+     *
+     * @return Lien
+     */
+    public function setGalerie(\CoreBundle\Entity\Galerie $galerie = null)
+    {
+        $this->galerie = $galerie;
+
+        return $this;
+    }
+
+    /**
+     * Get galerie
+     *
+     * @return \CoreBundle\Entity\Galerie
+     */
+    public function getGalerie()
+    {
+        return $this->galerie;
     }
 }

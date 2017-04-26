@@ -105,7 +105,7 @@ footer {
   ul {
     position: absolute;
     background-color: #f3f1f1;
-    top: -900px;
+    top: -20000px;
     right: 10px;
     width: 30%;
     padding: 0;
@@ -122,6 +122,10 @@ footer {
     height: 30px;
     padding: 10px;
     line-height: 100%;
+  }
+
+  .viewer-fullscreen{
+    display: none;
   }
 }
 @media screen and (max-width: 545px) {

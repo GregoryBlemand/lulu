@@ -2,9 +2,10 @@
 
 namespace CoreBundle\Form;
 
+use CoreBundle\CoreBundle;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -19,30 +20,51 @@ class LienType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, array(
-                'label' => 'texte du lien :',
+                'label' => 'Titre du lien (visible par les visiteurs):',
                 'attr'  => array('class' => 'form-control')
-            ))
-            ->add('url', TextType::class, array(
-                'label' => 'url :',
-                'attr'  => array('class' => 'form-control')
-            ))
-            ->add('ordre', HiddenType::class, array(
-                'label' => 'ordre dans le menu :',
-                'attr'  => array('class' => 'form-control', 'value' => 0)
             ))
             ->add('type', ChoiceType::class, array(
-                'label' => 'type de lien :',
-                'choices'  => array(
-                    'Lien' => 'Lien',
-                    'Galerie' => 'Galerie',
-                    'Page' => 'Page'
+                'label' => 'type de lien',
+                'attr'  => array('class' => 'form-control'),
+                'placeholder' => 'Choisir un type de lien',
+                'choices' => array(
+                    'externe' => 'EXTERNE',
+                    'page' => 'PAGE',
+                    'galerie' => 'GALERIE',
+                )
+            ))
+            ->add('url', TextType::class, array(
+                'label' => 'Adresse internet :',
+                'attr'  => array(
+                    'class' => 'form-control',
+                    'required' => false,
+                )
+            ))
+            ->add('page', EntityType::class, array(
+                'attr'  => array(
+                    'class' => 'form-control',
+                    'required' => false,
                 ),
-                'attr'  => array('class' => 'form-control')
+                'class'        => 'CoreBundle:Page',
+                'choice_label' => 'title',
+                'placeholder' => 'Quelle page choisir',
+                'empty_data'  => null
+            ))
+            ->add('galerie', EntityType::class, array(
+                'attr'  => array(
+                    'class' => 'form-control',
+                    'required' => false,
+                ),
+                'class'        => 'CoreBundle:Galerie',
+                'choice_label' => 'title',
+                'placeholder' => 'Quelle galerie choisir',
+                'empty_data'  => null
             ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Enregistrer',
                 'attr'  => array('class' => 'btn btn-primary pull-right')
-            ));
+            ))
+        ;
     }
     
     /**
