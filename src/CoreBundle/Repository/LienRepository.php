@@ -13,7 +13,7 @@ class LienRepository extends \Doctrine\ORM\EntityRepository
     public function getNbLiens(){
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT COUNT(l) FROM CoreBundle:Lien l WHERE \'ordre\' != \'null\''
+                'SELECT COUNT(l) FROM CoreBundle:Lien l WHERE l.ordre != \'null\''
             )
             ->getResult()
             ;

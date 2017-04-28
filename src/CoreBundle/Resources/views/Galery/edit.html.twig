@@ -5,7 +5,12 @@
         <h1>Création d'une galerie de photos</h1>
 
         <form action="{{ path('edit_galery', {'id' : galerie.id }) }}" method="POST" enctype="multipart/form-data">
+            <div><button type="submit" id="corebundle_galerie_save" name="corebundle_galerie[save]" class="btn btn-primary pull-right">Enregistrer</button></div><br>
             <div>{{ form_row(form.title) }}<br></div>
+            <div>
+                <label>Lien vers cette galerie : </label><br>
+                <p><a href="http://lucile-ortega.com/{{ galerie.lien.slug }}" target="_blank">http://lucile-ortega.com/{{ galerie.lien.slug }}</a></p>
+            </div>
             <div>{{ form_row(form.description) }}<br></div>
             <div>{{ form_row(form.private) }}<br></div>
             <!-- zone de drag'n'drop -->
@@ -23,7 +28,7 @@
                             <img src="{{ asset('uploads/images/' ~ image.url) }}" alt="{{ image.alt }}" width="50%"><br>
                         </p>
                         <p class="col-sm-6">
-                            <a href="{{ path('delete_image', {'id' : image.id}) }}" class="btn btn-danger">Supprimer l'image</a>
+                            <a href="{{ path('delete_image', {'id' : image.id}) }}" class="btn btn-danger suppr">Supprimer l'image</a>
                         </p>
                         <div class="col-sm-12">
                             <label for="corebundle_galerie_images_{{ loop.index - 1 }}_alt">text alternatif :</label>

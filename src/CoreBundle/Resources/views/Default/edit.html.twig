@@ -3,7 +3,15 @@
 {% block body %}
     <section class="col-sm-9">
         <form action="{{ path('edit_page', {'id': page.id}) }}" method="post">
-            {{ form_widget(form) }}
+            <div>{{ form_row(form.title) }}<br></div>
+            <div>
+                <label>Lien vers cette page : </label><br>
+                <p><a href="http://lucile-ortega.com/{{ page.lien.slug }}" target="_blank">http://lucile-ortega.com/{{ page.lien.slug }}</a></p>
+            </div>
+            <div>{{ form_row(form.content) }}<br></div>
+            <div>{{ form_row(form.tags) }}<br></div>
+            <div>{{ form_row(form.publication) }}<br></div>
+            <div>{{ form_row(form.save) }}<br></div>
         </form>
     </section>
 {% endblock %}

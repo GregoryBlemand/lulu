@@ -74,8 +74,8 @@ $(document).ready(function() {
     var nbimg = $('form img').length;
 
     for(var i=0; i < nbimg; i++){
-        $('#suppr').trigger('click');
         $('#add_image').trigger('click');
+        $('#suppr').trigger('click');
     }
 
 
@@ -123,7 +123,16 @@ $(document).ready(function() {
         return false;
     });
 
+    /**********************             demande de confirmation avant suppression               ************************/
+    $delLinks = $('.suppr');
+    $delLinks.click(function(e){
+        if(!confirm('Voulez-vous vraiment supprimer ceci ?')){
+            e.preventDefault();
+        }
+    });
+
     /**********************             démarrage du drag'n'drop d'upload de fichiers               ************************/
+
 /* ce code ne sert à rien car la dropzone et déclarée sur la div qui a la class dropzone
 Je le garde au cas où je change de métode
 
@@ -139,13 +148,6 @@ Je le garde au cas où je change de métode
     });
 
     */
-
-    $title = $('#corebundle_galerie_title');
-    $title2 = $('#corebundle_galerie_lien_0_title');
-
-    $title.keyup(function(e){
-        $title2[0].value = $title[0].value;
-    });
 
 });
 

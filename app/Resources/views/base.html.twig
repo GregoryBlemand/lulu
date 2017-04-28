@@ -76,16 +76,7 @@
 
                 {% block nav %}
                     <nav class="col-sm-3">
-                        <!-- caché pour tab et smartphone
-                        <ul>
-                            <li><a href="{{ path('core_homepage') }}">Accueil</a></li>
-                            <li><a href="{{ path('show_page', {'slug': 'portraits'}) }}">Portraits</a></li>
-                            <li><a href="{{ path('show_page', {'slug': 'mariages'}) }}">Mariages</a></li>
-                            <li><a href="{{ path('show_page', {'slug': 'reportages'}) }}">Reportages</a></li>
-                            <li><a href="{{ path('show_page', {'slug': 'formations'}) }}">Formations</a></li>
-                            <li><a href="https://lucileortega.wordpress.com/" target="_blank">Le Blog</a></li>
-                            <li><a href="{{ path('show_page', {'slug': 'partenaires'}) }}">Partenaires</a></li>
-                        </ul>-->
+                        <!-- caché pour tab et smartphone -->
                         {{ render(controller("CoreBundle:Menu:viewMenu")) }}
                     </nav>
                 {% endblock %}
@@ -123,12 +114,16 @@
                     plugins: [
                         "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
                         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                        "table contextmenu directionality emoticons template textcolor paste textcolor colorpicker textpattern"
+                        "table contextmenu directionality emoticons template textcolor paste textcolor colorpicker textpattern responsivefilemanager"
                     ],
-                    toolbar1: "undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | formatselect fontselect fontsizeselect",
+                    image_advtab: true,
+                    toolbar1: "undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | formatselect fontselect fontsizeselect responsivefilemanager",
                     toolbar2: "cut copy paste | searchreplace | outdent indent blockquote | link unlink image | forecolor backcolor | table | hr charmap emoticons | print | spellchecker pagebreak",
-                    block_formats: 'Paragraphe=p;Titre 1=h1;Titre 2=h2;Titre 3=h3;Titre 4=h4;Titre 5=h5;Titre 6=h6;Préformaté=pre'
-                })
+                    block_formats: 'Paragraphe=p;Titre 1=h1;Titre 2=h2;Titre 3=h3;Titre 4=h4;Titre 5=h5;Titre 6=h6;Préformaté=pre',
+                    external_filemanager_path:"/lucile/site/web/js/tinymce/plugins/filemanager/",
+                    filemanager_title:"Envoi de fichiers" ,
+                    external_plugins: { "filemanager" : "/lucile/site/web/js/tinymce/plugins/filemanager/plugin.min.js"}
+                });
             </script>
             {% endif %}
         {% endblock %}

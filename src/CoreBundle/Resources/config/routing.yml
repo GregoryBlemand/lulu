@@ -16,12 +16,28 @@ add_link:
     defaults: { _controller: CoreBundle:Menu:add }
 
 edit_link:
-    path:     /admin/editlink
+    path:     /admin/editlink/{id}
     defaults: { _controller: CoreBundle:Menu:edit }
+    requirements:
+        id: \d+
 
 delete_link:
-    path:     /admin/dellink
+    path:     /admin/dellink/{id}
     defaults: { _controller: CoreBundle:Menu:delete }
+    requirements:
+        id: \d+
+
+up_link:
+    path:     /admin/uplink/{id}
+    defaults: { _controller: CoreBundle:Menu:upLink }
+    requirements:
+        id: \d+
+
+down_link:
+    path:     /admin/downlink/{id}
+    defaults: { _controller: CoreBundle:Menu:downLink }
+    requirements:
+        id: \d+
 
 # Gestion des pages
 add_page:

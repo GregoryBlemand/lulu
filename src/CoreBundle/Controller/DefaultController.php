@@ -37,6 +37,11 @@ class DefaultController extends Controller
 
         if($form->isSubmitted() && $form->isValid()){
             $p = $form->getData();
+
+            // génération du lien/slug
+            $link = new Lien();
+            $p->setLien($link);
+
             $em->persist($p);
             $em->flush();
 

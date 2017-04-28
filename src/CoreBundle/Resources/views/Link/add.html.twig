@@ -26,6 +26,21 @@
             $galerie.attr('disabled', true);
             $page.attr('disabled', true);
 
+            switch ($type.val()) {
+                case 'PAGE':
+                    $page.attr('disabled', false);
+                    break;
+
+                case 'GALERIE':
+                    $galerie.attr('disabled', false);
+                    break;
+
+                case 'EXTERNE':
+                    $url.attr('disabled', false);
+                    $url.focus();
+                    break;
+            }
+
             // au changement sur $type, supprimer le required sur tous les champs sauf sur le type choisi, focus sur le type choisi
             $type.change(function(){
                 switch ($type.val()){

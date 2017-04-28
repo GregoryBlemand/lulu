@@ -34,7 +34,7 @@ class PageType extends AbstractType
             ->add('publication')
             ->add('save', SubmitType::class, array(
                 'label' => 'envoyer',
-                'attr' => array('class' => 'btn btn-primary')
+                'attr' => array('class' => 'btn btn-primary pull-right')
             ));
     }
     

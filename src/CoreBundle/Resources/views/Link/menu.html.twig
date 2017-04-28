@@ -1,0 +1,21 @@
+<!-- caché pour tab et smartphone -->
+<ul>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <li><a href="{{ path('core_adminpage') }}">admin</a></li>
+        <li><a href="{{ path('fos_user_security_logout') }}">déconnecter</a></li>
+        <li>----------------</li>
+    {% endif %}
+
+    <li><a href="{{ path('core_homepage') }}">Accueil</a></li>
+
+    {% for lien in liens %}
+        <li>
+            {% if lien.type == 'EXTERNE' %}
+                <a href="{{ lien.url }}" target="_blank">{{ lien.title }}</a>
+            {% else %}
+                <a href="{{ path('show_page', {'slug': lien.slug}) }}">{{ lien.title }}</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+
+</ul>

@@ -16,6 +16,9 @@ body {
   font-family: "Century Gothic";
 }
 
+img {
+  width: 100%;
+}
 .container {
   position: relative;
   border: 1px solid black;

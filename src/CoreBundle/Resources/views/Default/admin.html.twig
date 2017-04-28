@@ -19,7 +19,7 @@
                     <tr>
                         <td>{{ galery.title }}</td>
                         <td><a href="{{ path('edit_galery', {'id': galery.id}) }}">edit</a></td>
-                        <td><a href="{{ path('delete_galery', {'id': galery.id}) }}">suppr</a></td>
+                        <td><a href="{{ path('delete_galery', {'id': galery.id}) }}" class="suppr">suppr</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -27,6 +27,7 @@
         {% else %}
             <div class="well">Aucune galerie créée</div>
         {% endif %}
+        <br><br><br>
 
         <!-- partie pages -->
         <h2>Gestion des pages</h2>
@@ -45,7 +46,7 @@
                     <tr>
                         <td>{{ page.title }}</td>
                         <td><a href="{{ path('edit_page', {'id': page.id}) }}">edit</a></td>
-                        <td><a href="{{ path('delete_page', {'id': page.id}) }}">suppr</a></td>
+                        <td><a href="{{ path('delete_page', {'id': page.id}) }}" class="suppr">suppr</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -53,17 +54,17 @@
         {% else %}
             <div class="well">Aucune page créée</div>
         {% endif %}
+        <br><br><br>
 
         <!-- partie menu -->
         <h2>Gestion du menu</h2>
-        <p> Ici. tu pourras bientôt gérer le menu de navigation. </p>
         <div>
             <p><a href="{{ path('add_link') }}" class="btn btn-info pull-right">Ajouter un lien</a></p>
         </div>
         {% if liens %}
             <table class="table table-bordered">
                 <thead>
-                <td width="5%">ordre</td>
+                <td width="10%">ordre</td>
                 <td width="60%">titre du lien</td>
                 <td>Type</td>
                 <td>Editer</td>
@@ -72,11 +73,24 @@
                 <tbody>
                 {% for lien in liens %}
                     <tr>
-                        <td>{{ lien.ordre }}</td>
-                        <td>{{ lien.title }}</td>
+                        <td>
+                            <p style="text-align: center">{{ lien.ordre }}</p>
+                            <p style="text-align: center">
+                                {% if lien.ordre > 1 %}
+                                    <a href="{{ path('up_link', {'id': lien.id}) }}"><img src="{{ asset('images/up-arrow-circle-th.png') }}" alt="up" width="15px"></a>
+                                {% endif %}
+                                {% if loop != loop.last %}
+                                    <a href="{{ path('down_link', {'id': lien.id}) }}"><img src="{{ asset('images/down-arrow-circle-th.png') }}" alt="up" width="15px"></a>
+                                {% endif %}
+                            </p>
+                        </td>
+                        <td>
+                            <strong>Ancre du lien : </strong>{{ lien.title }}<br>
+                            <strong>vers l'adresse : </strong> http://lucile-ortega.com/{{ lien.slug }}
+                        </td>
                         <td>{{ lien.type }}</td>
                         <td><a href="{{ path('edit_link', {'id': lien.id}) }}">edit</a></td>
-                        <td><a href="{{ path('delete_link', {'id': lien.id}) }}">suppr</a></td>
+                        <td><a href="{{ path('delete_link', {'id': lien.id}) }}" class="suppr">suppr</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -86,3 +100,4 @@
         {% endif %}
     </section>
 {% endblock %}
+
