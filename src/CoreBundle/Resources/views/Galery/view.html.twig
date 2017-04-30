@@ -1,5 +1,15 @@
 {% extends '::base.html.twig' %}
 
+{% block keywords %}
+    {% if galerie.tags is not null and galerie.tags is not empty %}
+        <META NAME="KEYWORDS" CONTENT="{{ galerie.tags }}">
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block title %}{{ galerie.title ~ ' | ' ~ parent() }}{% endblock %}
+
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('css/viewer.css') }}">

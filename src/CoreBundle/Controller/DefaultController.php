@@ -2,22 +2,16 @@
 
 namespace CoreBundle\Controller;
 
-use CoreBundle\CoreBundle;
 use CoreBundle\Entity\Lien;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use CoreBundle\Entity\Page;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
-    {
-        return $this->render('CoreBundle:Default:index.html.twig');
-    }
 
     /**
      * Fonction de création d'une page
@@ -124,8 +118,14 @@ class DefaultController extends Controller
         $lien = $em->getRepository('CoreBundle:Lien')->findOneBy(array('slug' => $slug));
 
         if($lien === null){ // on a pas trouvé de lien correspondant
-            // envoie une erreur 404 page non-trouvée
-            throw new NotFoundHttpException();
+
+            if($slug === 'accueil'){
+                // si c'est le slug accueil qu'on a pas trouvé, on renvoie le template index par défaut
+                return $this->render('CoreBundle:Default:index.html.twig');
+            } else { // si c'est un autre slug qu'on cherchait
+                // envoie une erreur 404 page non-trouvée
+                throw new NotFoundHttpException();
+            }
         }
 
         if($lien->getType() === 'PAGE'){ // si le lien renvoie à une page, on la rend avec le template de page

@@ -13,6 +13,7 @@
             </div>
             <div>{{ form_row(form.description) }}<br></div>
             <div>{{ form_row(form.private) }}<br></div>
+            <div>{{ form_row(form.tags) }}<br></div>
             <!-- zone de drag'n'drop -->
             <div class="dropzone my-dropzone" id="form_snippet_image" action="{{ path('ajax_snippet_image_send', {'id' : galerie.id }) }}"></div>
             <!-- fin de zone -->

@@ -60,6 +60,15 @@ class Galerie
      */
     private $images;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tags", type="string", length=255, nullable=true)
+     *
+     * @Assert\Length(max=200, minMessage="Les tags ne doivent pas excéder {{ limit }} caractères.")
+     */
+    private $tags;
+
 
     /**
      * Get id
@@ -211,5 +220,29 @@ class Galerie
     public function getLien()
     {
         return $this->lien;
+    }
+
+    /**
+     * Set tags
+     *
+     * @param string $tags
+     *
+     * @return Galerie
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Get tags
+     *
+     * @return string
+     */
+    public function getTags()
+    {
+        return $this->tags;
     }
 }

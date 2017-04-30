@@ -1,9 +1,17 @@
 {% extends '::base.html.twig' %}
 
+{% block keywords %}
+    {% if page.tags is not null and page.tags is not empty %}
+        <META NAME="KEYWORDS" CONTENT="{{ page.tags }}">
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block title %}{{ page.title ~ ' | ' ~ parent() }}{% endblock %}
+
 {% block body %}
     <section class="col-sm-9">
-        <h1>{{ page.title }}</h1>
-
         <article>
             {{ page.content | raw }}
         </article>

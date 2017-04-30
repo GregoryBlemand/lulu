@@ -8,10 +8,19 @@ use CoreBundle\Form\LienType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 
 class MenuController extends Controller
 {
+    /**
+     * Ajout d'un lien au menu de navigation
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addAction(Request $request){
         $em = $this->getDoctrine()->getManager();
 
@@ -39,6 +48,15 @@ class MenuController extends Controller
         ));
     }
 
+    /**
+     * Edition d'un lien du menu
+     *
+     * @param $id
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function editAction($id, Request $request){
         $em = $this->getDoctrine()->getManager();
 
@@ -66,6 +84,16 @@ class MenuController extends Controller
         ));
     }
 
+    /**
+     * Suppression d'un lien du menu
+     *
+     * @param $id
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @throws \Exception
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function deleteAction($id, Request $request){
         $em = $this->getDoctrine()->getManager();
         $lien = $em->getRepository('CoreBundle:Lien')->find($id);
@@ -91,6 +119,14 @@ class MenuController extends Controller
         return $this->redirectToRoute('core_adminpage');
     }
 
+    /**
+     * Déplacement vers le haut d'un lien
+     *
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function upLinkAction($id){
         $em = $this->getDoctrine()->getManager();
         $lien = $em->getRepository('CoreBundle:Lien')->find($id);
@@ -106,6 +142,14 @@ class MenuController extends Controller
         return $this->redirectToRoute('core_adminpage');
     }
 
+    /**
+     * Descente d'un lien du menu
+     *
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function downLinkAction($id){
         $em = $this->getDoctrine()->getManager();
         $lien = $em->getRepository('CoreBundle:Lien')->find($id);
@@ -121,6 +165,11 @@ class MenuController extends Controller
         return $this->redirectToRoute('core_adminpage');
     }
 
+    /**
+     * Affichage du menu
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function viewMenuAction(){
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(

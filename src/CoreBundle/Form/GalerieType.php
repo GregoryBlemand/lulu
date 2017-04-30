@@ -32,6 +32,11 @@ class GalerieType extends AbstractType
                 'label' => 'Rendre la galerie privée : ',
                 'required' => false
             ))
+            ->add('tags', TextType::class, array(
+                'label' => 'Mots Clés de recherche : (séparés par une virgule)',
+                'required' => false,
+                'attr'  => array('class' => 'form-control')
+            ))
             ->add('images', CollectionType::class, array(
                 'entry_type'   => ImageType::class,
                 'allow_add'    => true,

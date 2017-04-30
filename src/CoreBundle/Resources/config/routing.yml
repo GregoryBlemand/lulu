@@ -1,6 +1,8 @@
 core_homepage:
     path:     /
-    defaults: { _controller: CoreBundle:Default:index }
+    defaults:
+        _controller: CoreBundle:Default:show
+        slug: accueil
 
 core_adminpage:
     path:     /admin

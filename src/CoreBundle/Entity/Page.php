@@ -26,6 +26,8 @@ class Page
      * @var string
      *
      * @ORM\Column(name="tags", type="string", length=255, nullable=true)
+     *
+     * @Assert\Length(max=200, minMessage="Les tags ne doivent pas excéder {{ limit }} caractères.")
      */
     private $tags;
 

@@ -9,7 +9,9 @@
 
         <META NAME="TITLE" CONTENT="Lucile Ortega Photographe">
         <META NAME="DESCRIPTION" CONTENT="Photographe professionnelle, je viens fixer les émotions de votre mariage, vos portraits, la naissance de votre enfant ou encore vos photos de famille. Je propose également des formations et des interventions photo">
-        <META NAME="KEYWORDS" CONTENT="Lucile Ortega, photographe, Annonay, rhône-alpes, Ardèche, portrait, portraitiste, portraits d'enfants, mariage, mariages, portraits mariages, portrait couple, maternité, photographie evenementielle, artiste photographe, paysage, drôme, isère, loire, rhône, lyon, valence, saint etienne, vienne">
+        {% block keywords %}
+            <META NAME="KEYWORDS" CONTENT="Lucile Ortega, photographe, Annonay, rhône-alpes, Ardèche, portrait, portraitiste, portraits d'enfants, mariage, mariages, portraits mariages, portrait couple, maternité, photographie evenementielle, artiste photographe, paysage, drôme, isère, loire, rhône, lyon, valence, saint etienne, vienne">
+        {% endblock %}
         <META NAME="SUBJECT" CONTENT="photos de lucile ortega, portfolio">
         <META NAME="CATEGORY" CONTENT="Art, Photographie, Portfolio">
         <META NAME="AUTHOR" CONTENT="Lucile Ortega">
@@ -117,6 +119,8 @@
                         "table contextmenu directionality emoticons template textcolor paste textcolor colorpicker textpattern responsivefilemanager"
                     ],
                     image_advtab: true,
+                    convert_urls: false,
+                    height: 500,
                     toolbar1: "undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | formatselect fontselect fontsizeselect responsivefilemanager",
                     toolbar2: "cut copy paste | searchreplace | outdent indent blockquote | link unlink image | forecolor backcolor | table | hr charmap emoticons | print | spellchecker pagebreak",
                     block_formats: 'Paragraphe=p;Titre 1=h1;Titre 2=h2;Titre 3=h3;Titre 4=h4;Titre 5=h5;Titre 6=h6;Préformaté=pre',

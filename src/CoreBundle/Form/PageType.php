@@ -31,7 +31,6 @@ class PageType extends AbstractType
                 'required' => false,
                 'attr'  => array('class' => 'form-control')
             ))
-            ->add('publication')
             ->add('save', SubmitType::class, array(
                 'label' => 'envoyer',
                 'attr' => array('class' => 'btn btn-primary pull-right')

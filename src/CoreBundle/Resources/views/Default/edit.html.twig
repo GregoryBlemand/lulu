@@ -10,7 +10,7 @@
             </div>
             <div>{{ form_row(form.content) }}<br></div>
             <div>{{ form_row(form.tags) }}<br></div>
-            <div>{{ form_row(form.publication) }}<br></div>
+            {{ form_widget(form._token) }}
             <div>{{ form_row(form.save) }}<br></div>
         </form>
     </section>
