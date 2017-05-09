@@ -1,7 +1,11 @@
 <!-- caché pour tab et smartphone -->
 <ul>
-    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+    {% if is_granted('ROLE_ADMIN') %}
         <li><a href="{{ path('core_adminpage') }}">admin</a></li>
+    {% endif %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <li><a href="{{ path('shootings') }}">vos shootings</a></li>
         <li><a href="{{ path('fos_user_security_logout') }}">déconnecter</a></li>
         <li>----------------</li>
     {% endif %}

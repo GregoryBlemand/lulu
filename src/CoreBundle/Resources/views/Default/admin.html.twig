@@ -17,7 +17,14 @@
                 <tbody>
                 {% for galery in galeries %}
                     <tr>
-                        <td>{{ galery.title }}</td>
+                        <td>
+                            {{ galery.title }}
+                            {% if galery.private %}
+                                - Galerie privée
+                            {% else %}
+                                - Galerie public
+                            {% endif %}
+                        </td>
                         <td><a href="{{ path('edit_galery', {'id': galery.id}) }}">edit</a></td>
                         <td><a href="{{ path('delete_galery', {'id': galery.id}) }}" class="suppr">suppr</a></td>
                     </tr>
@@ -64,7 +71,7 @@
         {% if liens %}
             <table class="table table-bordered">
                 <thead>
-                <td width="10%">ordre</td>
+                <td width="5%">ordre</td>
                 <td width="60%">titre du lien</td>
                 <td>Type</td>
                 <td>Editer</td>

@@ -1,0 +1,97 @@
+{% extends '::base.html.twig' %}
+
+{% block keywords %}
+    {% if galerie.tags is not null and galerie.tags is not empty %}
+        <META NAME="KEYWORDS" CONTENT="{{ galerie.tags }}">
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block title %}{{ galerie.title ~ ' | ' ~ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/viewer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/galery.css') }}">
+
+    <style>
+        .selectfs {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 3000;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <section class="col-sm-9">
+        <div>
+            <h2>Cette galerie est privée.</h2>
+            <p>
+                Vous seul pouvez la voir. <br>
+                Et c'est l'occasion de sélectionner les photos que vous souhaitez garder. <br>
+                Une fois la sélection faites, vous pouvez m'avertir par mail.
+            </p>
+        </div>
+        <div class="docs-galley">
+            <ul class="docs-pictures clearfix">
+                {% if galerie %}
+                    {% for image in galerie.images %}
+                    <li {% if loop.index > 9 %} style="display: none" {% endif %}><img data-original="{{ asset('uploads/images/') ~ image.url }}" src="{{ asset('uploads/thumbs/') ~ image.url }}" data-id="{{ image.id }}" alt="{{ image.alt }}" {% if image.selected %} selected {% endif %}></li>
+                    {% endfor %}
+                {% else %}
+                <li><p>la galerie n'a pas pu être chargée !</p></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div>
+            <h2>image courante : <span id="courant"></span></h2>
+            <p id="controls">
+                <label for="select">Sélectionnez cette photo : <input type="checkbox" id="select"></label>
+                <button class="btn" id="btnselect">Selectionner !</button>
+
+                <input id="imgId" type="hidden">
+            </p>
+        </div>
+        <br><br>
+        <div id="preview">
+        </div>
+        <div style="margin-top: 20px">
+            {{ galerie.description | raw}}
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        base = '{{ path('core_homepage') }}';
+
+        $check = $('#select');
+        $check.css('display', 'none');
+
+        $btn = $('#btnselect');
+        $btn.click(function(e){
+            $check.trigger('click');
+        });
+
+        $check.click(function(e){
+            $id = $('#imgId').attr('value');
+
+            $btn.toggleClass('btn-info').toggleClass('btn-primary');
+            if($('.docs-pictures').find('img[data-id='+$id+']')[0].hasAttribute('selected')){
+                $('.docs-pictures').find('img[data-id='+$id+']').removeAttr('selected');
+            } else {
+                $('.docs-pictures').find('img[data-id='+$id+']').attr('selected','true');
+            }
+
+            // envoie de la requete selection en ajax
+            $.post( base + 'ajax/select/img/' + $id, function( data ) {
+                console.log( "Data Loaded: " + data.id );
+            });
+        });
+
+    </script>
+{% endblock %}

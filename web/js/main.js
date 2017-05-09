@@ -94,6 +94,18 @@ $(document).ready(function() {
         },
         built: function (e) {
             console.log(e.type);
+            if($('#courant')[0] != undefined) { // on vérifie si on est dans une galerie privée
+                preview();
+
+                $('#btnselect').click(function (e) {
+                    preview();
+                });
+
+                $('.viewer-fullscreen').click(function (e){
+                    // toggle class du bouton
+                    $('#btnselect').toggleClass('selectfs');
+                });
+            }
         },
         show: function (e) {
             console.log(e.type);
@@ -112,6 +124,31 @@ $(document).ready(function() {
         },
         viewed: function (e) {
             console.log(e.type);
+            // après affichage d'une image dans le slide
+            if($('#courant')[0] != undefined){ // on vérifie si on est dans une galerie privée
+                // On cherche dans la liste des miniature celle qui est sélectionnée
+                $list = $('.viewer-list').find('li');
+                i = parseInt($('.viewer-list li.viewer-active').find('img').attr('data-index'));
+
+                // affichage du numéro de l'image
+                $('#courant')[0].innerHTML = 'image ' + (i+1) + ' sur ' + $list.length;
+
+                $listimg = $('.docs-pictures').find('img');
+                // on récupère l'id de l'image et si elle est sélectionnée ou pas
+                $id = $listimg[i].attributes['data-id'].value;
+                $('#imgId').attr('value', $id);
+
+                $('#select')[0].checked = $listimg[i].hasAttribute('selected');
+
+                if($('#select')[0].checked){
+                    $('#btnselect').removeClass('btn-primary').removeClass('btn-info').addClass('btn-info');
+                    $('#btnselect')[0].innerHTML = 'Retirer cette photo';
+                } else {
+                    $('#btnselect').removeClass('btn-primary').removeClass('btn-info').addClass('btn-primary');
+                    $('#btnselect')[0].innerHTML = 'Garder cette photo';
+                }
+
+            }
         }
     };
 
@@ -122,6 +159,62 @@ $(document).ready(function() {
     $galerie.contextmenu(function (e){ // on attrape l'évenement "menu contextuel"
         return false;
     });
+
+    /**********************             Gestion de la preview des photos sélectionnées dans la galerie privée               ************************/
+
+    function preview(){
+        $output = $('#preview')[0];
+        $thumbs = $('.docs-pictures').find('img[selected]');
+        nb = $thumbs.length;
+        $output.innerHTML = '';
+
+        activeIndex = parseInt($('.viewer-list li.viewer-active').find('img').attr('data-index'));
+        sel = $('.docs-pictures').find('img')[activeIndex].hasAttribute('selected');
+
+        if(sel){
+            $('#btnselect')[0].innerHTML = 'Retirer cette photo';
+            $('#btnselect').removeClass('btn-info').removeClass('btn-primary').addClass('btn-info');
+        } else {
+            $('#btnselect')[0].innerHTML = 'Garder cette photo';
+            $('#btnselect').removeClass('btn-info').removeClass('btn-primary').addClass('btn-primary');
+
+        }
+
+        $p = $('<p>');
+        $p.id = 'nbselect';
+        $p.html('Vous avez selectionné <strong>' + nb + ' image(s)</strong>');
+        $p.appendTo($output);
+
+        if(nb > 0){
+            // le bloc de visualisation des miniatures
+            $div = $('<div>');
+            $div.attr('id' , 'thumbs');
+            $div.addClass('row');
+
+            i = 0; // compteur d'index
+            $thumbs.each(function(){
+                $clone = $(this).clone();
+                while (!$('.docs-pictures').find('img')[i].hasAttribute('selected')){
+                    i++;
+                }
+                $clone.attr('data-index', i).addClass('col-sm-3').css('margin', '15px 0').appendTo($div).click(function(e){
+                    $('#imgId').attr('value', $(e.target).attr('data-id'));
+                    console.log($(e.target).attr('data-index'));
+                    $('img[class=col-sm-3]').fadeTo('fast', 1, function(){
+                        $(e.target).fadeTo('fast', 0.6);
+                    });
+
+                    $('.viewer-list').find('img[data-index=' + $(e.target).attr('data-index') + ']').click();
+                });
+                i++;
+            });
+
+            $div.appendTo($output);
+        }
+
+    }
+
+
 
     /**********************             demande de confirmation avant suppression               ************************/
     $delLinks = $('.suppr');

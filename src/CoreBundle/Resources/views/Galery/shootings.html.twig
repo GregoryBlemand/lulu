@@ -1,0 +1,82 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'Shootings | ' ~ parent() }}{% endblock %}
+
+{% block body %}
+    <section class="col-sm-9">
+        <!-- partie galeries -->
+        <h2>Bienvenue sur la page de vos shootings.</h2>
+        <div>
+            <p>Vous pourrez accéder ici à vos shootings.</p>
+        </div>
+        {% if galeries %}
+            <table class="table table-bordered">
+                <thead>
+                <td width="80%">Nom de la galerie de photos</td>
+                <td>Visionner</td>
+                </thead>
+                <tbody>
+                {% for galery in galeries %}
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    {{ galery.title }}
+                                </div>
+                    {% if is_granted('ROLE_ADMIN') %}
+                                <div class="col-sm-6">
+                                    {% if galery.private %}
+                                        <strong>Galerie Privée </strong>
+                                        <span id="owned">
+                                            {% if galery.user is null %}
+                                                <br>pas d'utilisateur sélectionné
+                                            {% else %}
+                                                <br>galerie assignée à {{ galery.user.username }}
+                                            {% endif %}
+                                        </span>
+                                        <br>
+                                        <select name="client" id="client" data-galery="{{ galery.id }}">
+                                            <option value="null">Choisis un utilisateur</option>
+                                            {% for client in users %}
+                                                <option value="{{ client.id }}" {% if galery.user is not null %}{% if client.id == galery.user.id %}selected{% endif %}{% endif %}>{{ client.username }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <button class="go">assigner</button>
+                                    {% else %}
+                                        <strong>Galerie Public </strong>
+                                    {% endif %}
+                                </div>
+                    {% endif %}
+                            </div>
+                        </td>
+                        <td><a href="{{ path('show_page', {'slug': galery.lien.slug}) }}">Voir </a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="well">Aucun shooting accessible pour le moment</div>
+        {% endif %}
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        base = '{{ path('core_homepage') }}';
+        $btn = $('.go');
+        $btn.click(function(e){
+            console.log($(this).prev().val());
+            console.log($(this).prev().attr('data-galery'));
+            $('#owned').html('<br>mise à jour en cours...');
+            // envoie de requète ajax de mise à jour de la galery pour assigner un client
+            $.post( base + 'ajax/add/user/galery/' + $(this).prev().attr('data-galery') + '/' + $(this).prev().val(), function( data ) {
+                if(data.success){
+                    $('#owned').html('<br>' + data.msg);
+                }
+                console.log( "Data Loaded: " + data.success );
+                console.log( "Data Loaded: " + data.msg );
+            });
+        });
+    </script>
+{% endblock %}

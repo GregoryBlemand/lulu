@@ -41,6 +41,13 @@ class Image
     private $alt;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="selected", type="boolean")
+     */
+    private $selected;
+
+    /**
      * @ORM\ManyToOne(targetEntity="CoreBundle\Entity\Galerie", cascade={"persist"}, inversedBy="images")
      */
     private $galerie;
@@ -59,6 +66,9 @@ class Image
 
     // On ajoute cet attribut pour y stocker le nom du fichier temporairement
     private $tempFilename;
+
+    // On ajoute cet attribut pour y stocker le nom du fichier original
+    private $originalName;
 
     public function getFile()
     {
@@ -177,6 +187,7 @@ class Image
         // On crée un nom de fichier unique et on l'enregistre
         $fileName = md5(uniqid()).'.'.$this->file->guessExtension();
         $this->url = $fileName;
+        $this->originalName = $this->file->getClientOriginalName();
 
     }
 
@@ -297,4 +308,33 @@ class Image
         return true;
     }
 
+
+    /**
+     * Set selected
+     *
+     * @param boolean $selected
+     *
+     * @return Image
+     */
+    public function setSelected($selected = false)
+    {
+        $this->selected = $selected;
+
+        return $this;
+    }
+
+    /**
+     * Get selected
+     *
+     * @return boolean
+     */
+    public function getSelected()
+    {
+        return $this->selected;
+    }
+
+    public function getOriginalName()
+    {
+        return $this->originalName;
+    }
 }

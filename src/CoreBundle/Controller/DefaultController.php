@@ -135,6 +135,9 @@ class DefaultController extends Controller
         } elseif ($lien->getType() === 'GALERIE'){
 
             // a faire : gérer si la galerie est privée ou non
+            if($lien->getGalerie()->getPrivate() === true){
+                return $this->redirectToRoute('private_galery', array('id' => $lien->getGalerie()->getId()));
+            }
 
             return $this->render('CoreBundle:Galery:view.html.twig', array(
                 'galerie' => $lien->getGalerie()
@@ -169,4 +172,6 @@ class DefaultController extends Controller
             'liens'    => $liens
         ));
     }
+
 }
+

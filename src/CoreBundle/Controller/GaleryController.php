@@ -120,6 +120,12 @@ class GaleryController extends Controller
             throw new NotFoundHttpException('La galerie à supprimer est introuvable.');
         }
 
+        // si la galerie est assignée à un utilisateur, on lui retire cette galerie
+        if($galery->getUser() !== null){
+            $user = $galery->getUser();
+            $user->removeGalery($galery);
+        }
+
         $em->remove($galery);
         $em->flush();
 
@@ -159,7 +165,7 @@ class GaleryController extends Controller
     }
 
     /**
-     * Fonction d'affichage d'une galerie
+     * Fonction d'affichage d'une galerie standard
      *
      * @return Response
      */
@@ -206,5 +212,136 @@ class GaleryController extends Controller
         //var_dump($request->files->get('file'));die;
         return new JsonResponse(array('success' => true));
     }
-}
 
+    /**
+     * Fonction d'affichage d'une galerie privée
+     * @param $id
+     * @return Response
+     *
+     * @Security("has_role('ROLE_CLIENT')")
+     */
+    public function privateGaleryAction($id){
+        /*
+         * Gestion de l'affichage des galerie privée...
+         *
+         * On vérifie si l'utilisateur est connecté et s'il a le droit de voir cette galerie.
+         * Il a le droit si la galerie lui est assignée ou s'il a les droits admin
+         *
+         * si c'est le cas, on affiche la galerie avec un champs de sélection par image
+         * (mise à jour en ajax d'un champs selected de la galerie en question)
+         *
+         */
+        $user = $this->getUser();
+
+        if (null === $user) {
+            // Ici, l'utilisateur est anonyme ou l'URL n'est pas derrière un pare-feu
+            return $this->redirectToRoute('login');
+        } else {
+            // Ici, $user est une instance de notre classe User
+            if($user->hasRole('ROLE_ADMIN') || $user->hasRole('ROLE_SUPER_ADMIN') || ($user->hasRole('ROLE_CLIENT') && $user->hasGalery($id))){
+                $em = $this->getDoctrine()->getManager();
+                $galerie = $em->getRepository('CoreBundle:Galerie')->find($id);
+
+                if($galerie === null){
+                    throw new NotFoundHttpException('La galerie demandée n\'a pas été trouvée.');
+                }
+
+                return $this->render('CoreBundle:Galery:private.html.twig', array(
+                    'galerie' => $galerie
+                ));
+            } else {
+                $this->addFlash('success', 'Vous n\'êtes pas autorisé à consulter le contenu demandé.');
+                return $this->redirectToRoute('core_homepage');
+            }
+        }
+    }
+
+    /**
+     * Fonction de selection ajax des images dans les galeries privées
+     * @param $id
+     * @return JsonResponse
+     */
+    public function ajaxSelectImgAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $img = $em->getRepository('CoreBundle:Image')->find($id);
+
+        if(null === $img){
+            throw new NotFoundHttpException("Galerie demandée inconnue...");
+        }
+
+        if($img->getSelected()){
+            $img->setSelected(false);
+        } else {
+            $img->setSelected(true);
+        }
+
+        $em->flush();
+
+        return new JsonResponse(array('select' => $img->getSelected(), 'id' => $id));
+    }
+
+    /**
+     * Fonction de listage des shootings d'un client
+     * @return Response
+     *
+     * @Security("has_role('ROLE_CLIENT')")
+     */
+    public function shootingsAction(){
+        // On récupère l'utilisateur courant
+        $user = $this->getUser();
+
+        if (null === $user) {
+            // Ici, l'utilisateur est anonyme ou l'URL n'est pas derrière un pare-feu
+            return $this->redirectToRoute('login');
+        } else {
+            // Ici, $user est une instance de notre classe User
+            $em = $this->getDoctrine()->getManager();
+
+            // Si l'user est un admin ou un super admin, on récupère tous les galeries
+            if($user->hasRole('ROLE_ADMIN') || $user->hasRole('ROLE_SUPER_ADMIN')){
+                $galeries = $em->getRepository('CoreBundle:Galerie')->findAll();
+                $users = $em->getRepository('CoreBundle:UserAdmin')->findAll();
+            } elseif ($user->hasRole('ROLE_CLIENT')){
+                $galeries = $em->getRepository('CoreBundle:Galerie')->findBy(array('user' => $user));
+                $users = null;
+            }
+
+            return $this->render('CoreBundle:Galery:shootings.html.twig', array(
+                'galeries' => $galeries,
+                'users' => $users
+            ));
+        }
+    }
+
+    /**
+     * Fonction qui assigne une galerie à un utilisateur.
+     * @param $galery - id de la galerie à assigner
+     * @param $user - id de l'utilisateur à assigner
+     * @return JsonResponse
+     */
+    public function ajaxAddGaleryUserAction($galery, $user){
+        // mise à jour des galeries et utilisateurs pour assigner un user aux galeries privées
+        $em = $this->getDoctrine()->getManager();
+        $g = $em->getRepository('CoreBundle:Galerie')->find($galery);
+        // je récupère l'utilisateur de la galerie et je lui enlève
+        $tempU = $g->getUser();
+        if($tempU !== null){
+            $tempU->removeGalery($g);
+        }
+        if ($user !== 'null'){
+            // on récupère l'utilisateur
+            $client = $em->getRepository('CoreBundle:UserAdmin')->find($user);
+            if($client == null){
+                return new JsonResponse(array('success' => false, 'msg' => 'Client introuvable...'));
+            }
+            $client->addGalery($g);
+            $em->flush();
+            return new JsonResponse(array('success' => true, 'msg' => 'La galerie a été assignée à ' . $client->getUsername()));
+
+        } else { // si le $user est null, c'est qu'on désassigne la galerie (ce qui a été fait plus haut)
+            $em->flush();
+            return new JsonResponse(array('success' => true, 'msg' => 'Pas d\'utilisateur sélectionné'));
+        }
+    }
+
+}

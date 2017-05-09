@@ -61,6 +61,11 @@ class Galerie
     private $images;
 
     /**
+     * @ORM\ManyToOne(targetEntity="CoreBundle\Entity\UserAdmin", inversedBy="galeries")
+     */
+    private $user;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="tags", type="string", length=255, nullable=true)
@@ -138,6 +143,9 @@ class Galerie
     public function setPrivate($private)
     {
         $this->private = $private;
+        if($private == false && $this->getUser() !== null){
+            $this->getUser()->removeGalery($this);
+        }
 
         return $this;
     }
@@ -244,5 +252,29 @@ class Galerie
     public function getTags()
     {
         return $this->tags;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \CoreBundle\Entity\UserAdmin $user
+     *
+     * @return Galerie
+     */
+    public function setUser(\CoreBundle\Entity\UserAdmin $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \CoreBundle\Entity\UserAdmin
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

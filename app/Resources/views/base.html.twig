@@ -21,7 +21,14 @@
         <META NAME="COPYRIGHT" CONTENT="Lucile Ortega">
         <META NAME="ROBOTS" CONTENT="All">
 
-        {% block socialMeta %}{% endblock %}
+        {% block socialMeta %}
+            <!-- metas pour facebook -->
+            <meta property="og:url" content="http://www.lucile-ortega.com" />
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="Lucile Ortega photographe" />
+            <meta property="og:description" content="Photographe professionnelle, je viens fixer les émotions de votre mariage, vos portraits, la naissance de votre enfant ou encore vos photos de famille. Je propose également des formations et des interventions photo" />
+            <meta property="og:image" content="{{ asset('images/portrait.jpeg') }}" />
+        {% endblock %}
         <title>{% block title %}Lucile Ortega{% endblock %}</title>
         {% block stylesheets %}
             <!-- Bootstrap -->
@@ -89,11 +96,9 @@
                 <p>
                     <a href="http://gregory.blemand.free.fr/" target="_blank">Site réalisé par Greg Blémand</a><br>
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a href="{{ path('core_adminpage') }}">administration</a>
-                        <br>
                         <a href="{{ path('fos_user_security_logout') }}">se déconnecter</a>
                     {% else %}
-                        <a href="{{ path('core_adminpage') }}">se connecter</a>
+                        <a href="{{ path('fos_user_security_login') }}">se connecter</a>
                     {% endif %}
                 </p>
             </footer>
