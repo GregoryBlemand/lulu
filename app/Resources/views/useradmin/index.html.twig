@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="col-sm-9">
+    <h1>Liste des utilisateurs</h1>
+    <div>
+        <p><a href="{{ path('fos_user_registration_register') }}" class="btn btn-info">Ajouter un utilisateur</a></p>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Utilisateurs </th>
+                <th style="width: 10%">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for userAdmin in userAdmins %}
+            <tr>
+                <td><a href="{{ path('user_show', { 'id': userAdmin.id }) }}">{{ userAdmin.id }}</a> {{ userAdmin.username }} </td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('user_show', { 'id': userAdmin.id }) }}">Détails</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('user_edit', { 'id': userAdmin.id }) }}">Supprimer</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</section>
+{% endblock %}

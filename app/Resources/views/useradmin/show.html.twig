@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="col-sm-9">
+    <h1>Détails de {{ userAdmin.username }}</h1>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>Nom</th>
+                <td>{{ userAdmin.username }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ userAdmin.email }}</td>
+            </tr>
+            <tr>
+                <th>Dernière connexion</th>
+                <td>{{ userAdmin.lastLogin|date("d/m/Y - H\\hm") }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('user_index') }}">Retour à la liste</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+</section>
+{% endblock %}

@@ -1,3 +1,7 @@
+core_user:
+    resource: "@CoreBundle/Resources/config/routing/useradmin.yml"
+    prefix:   /user
+
 core_homepage:
     path:     /
     defaults:

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="col-sm-9">
+    <h1>Supprimer l'utilisateur ?</h1>
+
+    <p>Etes-vous sûr de vouloir supprimer l'utilisateur ?</p>
+    <a href="{{ path('user_index') }}" class="btn btn-primary">Retour à la liste</a>
+    {{ form_start(delete_form) }}
+        <input type="submit" value="Supprimer" class="btn btn-danger">
+    {{ form_end(delete_form) }}
+</section>
+{% endblock %}

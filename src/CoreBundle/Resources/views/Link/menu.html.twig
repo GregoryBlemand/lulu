@@ -3,6 +3,7 @@
 
     {% if is_granted('ROLE_ADMIN') %}
         <li><a href="{{ path('core_adminpage') }}">admin</a></li>
+        <li><a href="{{ path('user_index') }}">utilisateurs</a></li>
     {% endif %}
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
         <li><a href="{{ path('shootings') }}">vos shootings</a></li>
