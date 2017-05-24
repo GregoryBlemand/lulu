@@ -17,9 +17,9 @@
 
     <style>
         .selectfs {
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            position: fixed;
+            top: 30px;
+            left: 30px;
             z-index: 3000;
         }
     </style>
@@ -39,7 +39,7 @@
             <ul class="docs-pictures clearfix">
                 {% if galerie %}
                     {% for image in galerie.images %}
-                    <li {% if loop.index > 9 %} style="display: none" {% endif %}><img data-original="{{ asset('uploads/images/') ~ image.url }}" src="{{ asset('uploads/thumbs/') ~ image.url }}" data-id="{{ image.id }}" alt="{{ image.alt }}" {% if image.selected %} selected {% endif %}></li>
+                    <li {% if loop.index > 6 %} style="display: none" {% endif %}><img data-original="{{ asset('uploads/images/') ~ image.url }}" src="{{ asset('uploads/thumbs/') ~ image.url }}" data-id="{{ image.id }}" data-name="{{ image.originalName }}" alt="{{ image.alt }}" {% if image.selected %} selected {% endif %}></li>
                     {% endfor %}
                 {% else %}
                 <li><p>la galerie n'a pas pu être chargée !</p></li>
@@ -56,8 +56,14 @@
             </p>
         </div>
         <br><br>
+        {% if is_granted('ROLE_ADMIN') %}
+        <p><button id="lister" class="btn btn-primary">Générer la liste </button></p>
+        <div id="list">
+        </div>
+        {% endif %}
         <div id="preview">
         </div>
+
         <div style="margin-top: 20px">
             {{ galerie.description | raw}}
         </div>
@@ -91,6 +97,16 @@
             $.post( base + 'ajax/select/img/' + $id, function( data ) {
                 console.log( "Data Loaded: " + data.id );
             });
+        });
+
+        $('#lister').click(function(e){
+            $('#list')[0].innerHTML = '';
+            $list = '';
+            $('#preview').find('img').each(function(){
+               $list += '<br>' + $(this).attr('data-name');
+            });
+            $list += '<br><br>';
+            $('#list')[0].innerHTML = $list;
         });
 
     </script>

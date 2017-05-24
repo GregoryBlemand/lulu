@@ -95,11 +95,6 @@
             <footer>
                 <p>
                     <a href="http://gregory.blemand.free.fr/" target="_blank">Site réalisé par Greg Blémand</a><br>
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a href="{{ path('fos_user_security_logout') }}">se déconnecter</a>
-                    {% else %}
-                        <a href="{{ path('fos_user_security_login') }}">se connecter</a>
-                    {% endif %}
                 </p>
             </footer>
         </div>
@@ -129,9 +124,23 @@
                     toolbar1: "undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | formatselect fontselect fontsizeselect responsivefilemanager",
                     toolbar2: "cut copy paste | searchreplace | outdent indent blockquote | link unlink image | forecolor backcolor | table | hr charmap emoticons | print | spellchecker pagebreak",
                     block_formats: 'Paragraphe=p;Titre 1=h1;Titre 2=h2;Titre 3=h3;Titre 4=h4;Titre 5=h5;Titre 6=h6;Préformaté=pre',
-                    external_filemanager_path:"/lucile/site/web/js/tinymce/plugins/filemanager/",
+                    setup: function (editor) {
+                        editor.on('init', function(args) {
+                            editor = args.target;
+
+                            editor.on('NodeChange', function(e) {
+                                if (e && e.element.nodeName.toLowerCase() == 'img') {
+                                    width = e.element.width;
+                                    console.log(e.element.width);
+                                    height = e.element.height;
+                                    // tinyMCE.DOM.setAttribs(e.element, {'width': null, 'height': null});
+                                }
+                            });
+                        });
+                    },
+                    external_filemanager_path:"http://lucile-ortega.com/js/tinymce/plugins/filemanager/",
                     filemanager_title:"Envoi de fichiers" ,
-                    external_plugins: { "filemanager" : "/lucile/site/web/js/tinymce/plugins/filemanager/plugin.min.js"}
+                    external_plugins: { "filemanager" : "http://lucile-ortega.com/js/tinymce/plugins/filemanager/plugin.min.js"}
                 });
             </script>
             {% endif %}

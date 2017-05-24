@@ -73,7 +73,7 @@ $config = array(
 	| with start and final /
 	|
 	*/
-	'upload_dir' => '/lucile/site/web/images/uploads/',
+	'upload_dir' => '/images/uploads/',
 	/*
 	|--------------------------------------------------------------------------
 	| relative path from filemanager folder to upload folder

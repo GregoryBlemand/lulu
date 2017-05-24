@@ -8,10 +8,11 @@
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
         <li><a href="{{ path('shootings') }}">vos shootings</a></li>
         <li><a href="{{ path('fos_user_security_logout') }}">déconnecter</a></li>
-        <li>----------------</li>
+        <li>-----------------------</li>
     {% endif %}
 
     <li><a href="{{ path('core_homepage') }}">Accueil</a></li>
+
 
     {% for lien in liens %}
         <li>
@@ -22,5 +23,12 @@
             {% endif %}
         </li>
     {% endfor %}
+
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+    {% else %}
+        <li>-----------------------</li>
+        <li><a href="{{ path('fos_user_security_login') }}">Vos galeries</a></li>
+    {% endif %}
 
 </ul>

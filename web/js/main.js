@@ -82,6 +82,7 @@ $(document).ready(function() {
     /**********************             Gestion de l'affichage des galeries               ************************/
     var $images = $('.docs-pictures');
     var options = {
+        interval: 2500,
         inline: true,
         movable: false,
         zoomable: false,
@@ -147,18 +148,28 @@ $(document).ready(function() {
                     $('#btnselect').removeClass('btn-primary').removeClass('btn-info').addClass('btn-primary');
                     $('#btnselect')[0].innerHTML = 'Garder cette photo';
                 }
-
+            } else {
+                //modification de la meta og:image
+                i = parseInt($('.viewer-list li.viewer-active').find('img').attr('data-index'));
+                $listimg = $('.docs-pictures').find('img');
+                // on récupère l'id de l'image et si elle est sélectionnée ou pas
+                $src = $listimg[i].attributes['src'].value;
+                $('meta[property=\'og:image\']')[0].content = $src;
             }
+
         }
     };
 
     $images.viewer(options);
 
-    // on désactive le clic-droit sur les galeries
-    $galerie = $('.docs-galley');
-    $galerie.contextmenu(function (e){ // on attrape l'évenement "menu contextuel"
+    // on désactive le clic-droit sur le document histoire que les images ne soit pas téléchargées
+    $(document).contextmenu(function (e){ // on attrape l'évenement "menu contextuel"
         return false;
     });
+
+    if((autoplay !== undefined) && (autoplay == true)){
+        $images.viewer('play');
+    }
 
     /**********************             Gestion de la preview des photos sélectionnées dans la galerie privée               ************************/
 
@@ -241,6 +252,10 @@ Je le garde au cas où je change de métode
     });
 
     */
+
+    if($('section').find('img').attr('src') !== undefined){
+        $('meta[property=\'og:image\']')[0].content = $('section').find('img').attr('src');
+    }
 
 });
 

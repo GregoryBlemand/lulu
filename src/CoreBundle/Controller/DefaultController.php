@@ -133,14 +133,22 @@ class DefaultController extends Controller
                 'page'    => $lien->getPage()
             ));
         } elseif ($lien->getType() === 'GALERIE'){
+            $auto = false; // mettre à false
 
-            // a faire : gérer si la galerie est privée ou non
-            if($lien->getGalerie()->getPrivate() === true){
+            // Si la galerie est privée et que ce n'est pas l'accueil
+            if($lien->getGalerie()->getPrivate() === true && $lien->getSlug() !== 'accueil'){
                 return $this->redirectToRoute('private_galery', array('id' => $lien->getGalerie()->getId()));
             }
 
+            // si la galerie est publique
+            if($slug === 'accueil'){ // si la galerie est l'accueil
+                // on passe l'autoplay à true
+                $auto = true;
+            }
+
             return $this->render('CoreBundle:Galery:view.html.twig', array(
-                'galerie' => $lien->getGalerie()
+                'galerie' => $lien->getGalerie(),
+                'autoplay' => $auto
             ));
         }
 

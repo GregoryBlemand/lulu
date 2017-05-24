@@ -22,7 +22,7 @@
             <ul class="docs-pictures clearfix">
                 {% if galerie %}
                     {% for image in galerie.images %}
-                    <li {% if loop.index > 9 %} style="display: none" {% endif %}><img data-original="{{ asset('uploads/images/') ~ image.url }}" src="{{ asset('uploads/thumbs/') ~ image.url }}" alt="{{ image.alt }}"></li>
+                    <li {% if loop.index > 6 %} style="display: none" {% endif %}><img data-original="{{ asset('uploads/images/') ~ image.url }}" src="{{ asset('uploads/thumbs/') ~ image.url }}" alt="{{ image.alt }}"></li>
                     {% endfor %}
                 {% else %}
                 <li><p>la galerie n'a pas pu être chargée !</p></li>
@@ -34,3 +34,18 @@
         </div>
     </section>
 {% endblock %}
+
+{% if autoplay %}
+    {%  block javascripts %}
+        <script>
+            test = '{{ autoplay }}';
+            // lancement du diaporama automatique (galerie en accueil)
+            if( test == '1'){
+                autoplay = true ;
+            } else {
+                autoplay = false ;
+            }
+        </script>
+        {{ parent() }}
+    {% endblock %}
+{% endif %}

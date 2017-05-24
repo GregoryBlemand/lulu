@@ -68,6 +68,11 @@ class Image
     private $tempFilename;
 
     // On ajoute cet attribut pour y stocker le nom du fichier original
+    /**
+     * @var
+     *
+     * @ORM\Column(name="originalname", type="string", length=255)
+     */
     private $originalName;
 
     public function getFile()
@@ -188,7 +193,7 @@ class Image
         $fileName = md5(uniqid()).'.'.$this->file->guessExtension();
         $this->url = $fileName;
         $this->originalName = $this->file->getClientOriginalName();
-
+        $this->selected = false;
     }
 
     /**
@@ -336,5 +341,12 @@ class Image
     public function getOriginalName()
     {
         return $this->originalName;
+    }
+
+    public function setOriginalName($name)
+    {
+        $this->originalName = $name;
+
+        return $this;
     }
 }
